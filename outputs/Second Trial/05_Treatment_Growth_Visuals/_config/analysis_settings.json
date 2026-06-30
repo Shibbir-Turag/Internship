@@ -1,0 +1,56 @@
+{
+  "growth_rate_window": "Day 1 to Day 5",
+  "growth_rate_formula": "(Day 5 - Day 1) / 4",
+  "day_9_handling": "Later follow-up only",
+  "expected_cells_per_tray": 70,
+  "tray_design": [
+    {
+      "tray_no": 1,
+      "treatment": "No Microbes",
+      "environment": "Inside",
+      "interaction": "No Microbes | Inside"
+    },
+    {
+      "tray_no": 2,
+      "treatment": "No Microbes",
+      "environment": "Inside",
+      "interaction": "No Microbes | Inside"
+    },
+    {
+      "tray_no": 3,
+      "treatment": "No Microbes",
+      "environment": "Outside",
+      "interaction": "No Microbes | Outside"
+    },
+    {
+      "tray_no": 4,
+      "treatment": "No Microbes",
+      "environment": "Outside",
+      "interaction": "No Microbes | Outside"
+    },
+    {
+      "tray_no": 5,
+      "treatment": "Microbes",
+      "environment": "Inside",
+      "interaction": "Microbes | Inside"
+    },
+    {
+      "tray_no": 6,
+      "treatment": "Microbes",
+      "environment": "Outside",
+      "interaction": "Microbes | Outside"
+    },
+    {
+      "tray_no": 7,
+      "treatment": "Microbes",
+      "environment": "Outside",
+      "interaction": "Microbes | Outside"
+    },
+    {
+      "tray_no": 8,
+      "treatment": "Microbes",
+      "environment": "Inside",
+      "interaction": "Microbes | Inside"
+    }
+  ]
+}

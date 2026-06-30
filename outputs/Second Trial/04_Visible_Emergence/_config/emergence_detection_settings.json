@@ -1,0 +1,13 @@
+{
+  "purpose": "Visible green seedling evidence detection with continuous-day tracking.",
+  "green_hue_min": 20,
+  "green_hue_max": 95,
+  "green_saturation_min": 28,
+  "green_value_min": 35,
+  "excess_green_min": 12,
+  "green_to_red_ratio": 1.03,
+  "green_to_blue_ratio": 1.0,
+  "min_green_pixels_per_cell": 20,
+  "min_green_component_pixels": 12,
+  "temporal_rule": "Raw evidence is detected every day. Tracked emergence remains positive after first raw-positive day."
+}

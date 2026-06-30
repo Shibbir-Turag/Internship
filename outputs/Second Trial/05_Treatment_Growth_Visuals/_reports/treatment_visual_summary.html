@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Second Trial treatment and growth visuals</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 28px;
+    max-width: 1250px;
+    color: #1f2937;
+}
+h1, h2 {
+    color: #111827;
+}
+p {
+    line-height: 1.55;
+}
+.notice {
+    background: #f3f4f6;
+    border-left: 4px solid #6b7280;
+    padding: 14px 16px;
+}
+.data-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 16px 0 30px;
+}
+.data-table th, .data-table td {
+    border: 1px solid #d1d5db;
+    padding: 8px;
+    text-align: left;
+}
+.data-table th {
+    background: #e5e7eb;
+}
+figure {
+    margin: 28px 0;
+}
+img {
+    width: 100%;
+    max-width: 1100px;
+    border: 1px solid #d1d5db;
+}
+figcaption {
+    margin-top: 7px;
+    color: #4b5563;
+}
+</style>
+</head>
+<body>
+
+<h1>Second Trial: Treatment and environment growth visuals</h1>
+
+<p class="notice">
+These comparisons are descriptive. RGB green cover is an image-based growth
+proxy, not direct biomass. Each treatment × environment group has two trays,
+so inside/outside patterns should not be treated as formal proof.
+</p>
+
+<h2>Observed results</h2>
+
+<p>
+The higher Day 5 mean RGB green-cover proxy between the two primary treatments
+was observed for <strong>Microbes</strong>.
+The highest Day 5 green-cover proxy among all treatment × environment groups
+was observed for
+<strong>Microbes | Inside</strong>.
+The highest Day 1–Day 5 green-cover growth rate was observed for
+<strong>Microbes | Inside</strong>.
+</p>
+
+<h2>Microbes versus No Microbes</h2>
+<table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>group</th>
+      <th>tray_count</th>
+      <th>mean_day5_tracked_emergence_percent</th>
+      <th>mean_day5_green_cover_percent</th>
+      <th>mean_green_cover_rate_day1_to_day5_pp_per_day</th>
+      <th>mean_day9_green_cover_percent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Microbes</td>
+      <td>4</td>
+      <td>72.857</td>
+      <td>1.949</td>
+      <td>0.386</td>
+      <td>5.051</td>
+    </tr>
+    <tr>
+      <td>No Microbes</td>
+      <td>4</td>
+      <td>68.572</td>
+      <td>1.461</td>
+      <td>0.310</td>
+      <td>3.113</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Treatment × environment comparison</h2>
+<table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>group</th>
+      <th>tray_count</th>
+      <th>mean_day5_tracked_emergence_percent</th>
+      <th>mean_day5_green_cover_percent</th>
+      <th>mean_green_cover_rate_day1_to_day5_pp_per_day</th>
+      <th>mean_day9_green_cover_percent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Microbes | Inside</td>
+      <td>2</td>
+      <td>92.143</td>
+      <td>3.223</td>
+      <td>0.622</td>
+      <td>8.195</td>
+    </tr>
+    <tr>
+      <td>Microbes | Outside</td>
+      <td>2</td>
+      <td>53.572</td>
+      <td>0.676</td>
+      <td>0.150</td>
+      <td>1.907</td>
+    </tr>
+    <tr>
+      <td>No Microbes | Inside</td>
+      <td>2</td>
+      <td>72.143</td>
+      <td>1.937</td>
+      <td>0.407</td>
+      <td>3.744</td>
+    </tr>
+    <tr>
+      <td>No Microbes | Outside</td>
+      <td>2</td>
+      <td>65.000</td>
+      <td>0.986</td>
+      <td>0.213</td>
+      <td>2.482</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Individual tray ranking</h2>
+<table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>tray</th>
+      <th>treatment</th>
+      <th>environment</th>
+      <th>green_cover_rate_day1_to_day5_pp_per_day</th>
+      <th>day5_tracked_emergence_percent</th>
+      <th>day9_green_cover_percent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tray 5</td>
+      <td>Microbes</td>
+      <td>Inside</td>
+      <td>0.683</td>
+      <td>97.143</td>
+      <td>9.330</td>
+    </tr>
+    <tr>
+      <td>Tray 8</td>
+      <td>Microbes</td>
+      <td>Inside</td>
+      <td>0.561</td>
+      <td>87.143</td>
+      <td>7.060</td>
+    </tr>
+    <tr>
+      <td>Tray 2</td>
+      <td>No Microbes</td>
+      <td>Inside</td>
+      <td>0.462</td>
+      <td>72.857</td>
+      <td>3.024</td>
+    </tr>
+    <tr>
+      <td>Tray 1</td>
+      <td>No Microbes</td>
+      <td>Inside</td>
+      <td>0.352</td>
+      <td>71.429</td>
+      <td>4.464</td>
+    </tr>
+    <tr>
+      <td>Tray 3</td>
+      <td>No Microbes</td>
+      <td>Outside</td>
+      <td>0.238</td>
+      <td>67.143</td>
+      <td>2.748</td>
+    </tr>
+    <tr>
+      <td>Tray 4</td>
+      <td>No Microbes</td>
+      <td>Outside</td>
+      <td>0.187</td>
+      <td>62.857</td>
+      <td>2.217</td>
+    </tr>
+    <tr>
+      <td>Tray 7</td>
+      <td>Microbes</td>
+      <td>Outside</td>
+      <td>0.179</td>
+      <td>57.143</td>
+      <td>2.141</td>
+    </tr>
+    <tr>
+      <td>Tray 6</td>
+      <td>Microbes</td>
+      <td>Outside</td>
+      <td>0.122</td>
+      <td>50.000</td>
+      <td>1.673</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Charts</h2>
+<figure><img src="../charts/01_microbes_vs_no_microbes_emergence.png" alt="01_microbes_vs_no_microbes_emergence"><figcaption>01 microbes vs no microbes emergence</figcaption></figure>
+<figure><img src="../charts/02_microbes_vs_no_microbes_green_cover.png" alt="02_microbes_vs_no_microbes_green_cover"><figcaption>02 microbes vs no microbes green cover</figcaption></figure>
+<figure><img src="../charts/03_interaction_emergence.png" alt="03_interaction_emergence"><figcaption>03 interaction emergence</figcaption></figure>
+<figure><img src="../charts/04_interaction_green_cover.png" alt="04_interaction_green_cover"><figcaption>04 interaction green cover</figcaption></figure>
+<figure><img src="../charts/05_tray_green_cover_growth_rate_ranking.png" alt="05_tray_green_cover_growth_rate_ranking"><figcaption>05 tray green cover growth rate ranking</figcaption></figure>
+<figure><img src="../charts/06_day9_green_cover_by_group.png" alt="06_day9_green_cover_by_group"><figcaption>06 day9 green cover by group</figcaption></figure>
+
+</body>
+</html>

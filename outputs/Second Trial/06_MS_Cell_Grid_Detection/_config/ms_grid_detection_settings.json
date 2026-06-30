@@ -1,0 +1,21 @@
+{
+  "purpose": "Independent MS_NIR 7 x 10 cell grid detection for aligned MS_G, MS_R, MS_RE and MS_NIR bands.",
+  "critical_fix": "Hough circle configurations are evaluated separately. Circle candidates from different thresholds are never merged.",
+  "rows": 7,
+  "columns": 10,
+  "expected_cells": 70,
+  "square_zone_ratio": 0.9,
+  "hough_param2_values": [
+    68,
+    64,
+    60,
+    56,
+    52,
+    48
+  ],
+  "min_distance_ratio_values": [
+    0.5,
+    0.6,
+    0.7
+  ]
+}

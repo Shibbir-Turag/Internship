@@ -1,0 +1,24 @@
+{
+  "purpose": "Combine Second Trial RGB and multispectral analysis results into one final synthesis dataset and PDF report.",
+  "input_tray_status": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\data\\Second Trial\\Tray Status.xlsx",
+  "input_rgb_metrics": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Second Trial\\05_Treatment_Growth_Visuals\\_reports\\tray_growth_metrics.csv",
+  "input_ms_metrics": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Second Trial\\07_MS_Vegetation_Indices\\_reports\\ms_index_tray_summary.csv",
+  "output_master_csv": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Second Trial\\09_Second_Trial_Synthesis\\_reports\\second_trial_master_summary.csv",
+  "output_group_csv": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Second Trial\\09_Second_Trial_Synthesis\\_reports\\second_trial_group_summary.csv",
+  "output_excel_report": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Second Trial\\09_Second_Trial_Synthesis\\_reports\\second_trial_master_summary.xlsx",
+  "output_pdf_report": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Second Trial\\09_Second_Trial_Synthesis\\_reports\\second_trial_synthesis_report.pdf",
+  "report_format": "PDF",
+  "score_components": [
+    "day5_tracked_emergence_percent",
+    "day5_green_cover_percent",
+    "day5_mean_ndvi",
+    "day5_mean_ndre",
+    "green_cover_rate_day1_to_day5_pp_per_day",
+    "ndvi_rate_day1_to_day5_per_day",
+    "ndre_rate_day1_to_day5_per_day"
+  ],
+  "score_method": "Each available component is min-max normalised from 0 to 100 across trays, then averaged to create the overall observed performance score.",
+  "interpretation_note": "The score is descriptive and should not be treated as a formal statistical test.",
+  "day_1_to_day_5_rule": "Day 1 to Day 5 is the continuous growth-rate window.",
+  "day_9_rule": "Day 9 is treated as a later follow-up observation."
+}

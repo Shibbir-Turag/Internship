@@ -1,0 +1,7 @@
+group_type,group,tray_count,mean_day5_emergence_percent,mean_day5_rgb_green_cover_percent,mean_day5_ndvi,mean_day5_ndre,mean_rgb_green_cover_rate,mean_ndvi_rate,mean_ndre_rate,mean_overall_score,best_rank_in_group
+Treatment,Microbes,4,72.85725,1.949323,0.289943,-0.063749,0.386168,-0.002766,-0.001173,52.315519,1
+Treatment,No Microbes,4,68.5715,1.461412,0.297674,-0.068932,0.309821,-5.9e-05,-5e-05,53.315012,3
+Treatment x Environment,No Microbes | Inside,2,72.143,1.936891,0.295991,-0.064417,0.406995,-0.000178,0.000513,62.006299,3
+Treatment x Environment,No Microbes | Outside,2,65.0,0.985932,0.299357,-0.073447,0.212647,6.1e-05,-0.000613,44.623725,5
+Treatment x Environment,Microbes | Inside,2,92.143,3.222957,0.299745,-0.05722,0.621898,-0.00059,-0.000743,81.208244,1
+Treatment x Environment,Microbes | Outside,2,53.5715,0.675689,0.28014,-0.070277,0.150438,-0.004941,-0.001604,23.422795,6

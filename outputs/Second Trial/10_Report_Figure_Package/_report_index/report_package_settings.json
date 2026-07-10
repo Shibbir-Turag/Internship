@@ -1,0 +1,12 @@
+{
+  "purpose": "Collect final report-ready Second Trial outputs into one package.",
+  "output_root": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Second Trial\\10_Report_Figure_Package",
+  "report_format_preference": "PDF",
+  "overwrite": false,
+  "source_roots": {
+    "script05_rgb_treatment_visuals": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Second Trial\\05_Treatment_Growth_Visuals",
+    "script08_ms_treatment_comparison": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Second Trial\\08_MS_Treatment_Comparison",
+    "script09_second_trial_synthesis": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Second Trial\\09_Second_Trial_Synthesis"
+  },
+  "created_at": "2026-07-09T17:43:25"
+}

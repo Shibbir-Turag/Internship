@@ -1,0 +1,11 @@
+{
+  "purpose": "Relative NDVI and NDRE calculation using independent Script 06 multispectral square cell zones.",
+  "ndvi_formula": "(MS_NIR - MS_R) / (MS_NIR + MS_R)",
+  "ndre_formula": "(MS_NIR - MS_RE) / (MS_NIR + MS_RE)",
+  "accepted_grid_statuses": [
+    "PASS_AUTO",
+    "PASS_MANUAL"
+  ],
+  "minimum_valid_pixels_per_cell": 20,
+  "important_interpretation": "NDVI and NDRE are relative image-derived indices unless the source MS bands are calibrated reflectance products."
+}

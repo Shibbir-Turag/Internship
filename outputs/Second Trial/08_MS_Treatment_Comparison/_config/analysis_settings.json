@@ -1,0 +1,66 @@
+{
+  "purpose": "Treatment and environment comparison using Script 07 relative NDVI and NDRE outputs.",
+  "input_tray_status": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\data\\Second Trial\\Tray Status.xlsx",
+  "input_script07_tray_summary": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Second Trial\\07_MS_Vegetation_Indices\\_reports\\ms_index_tray_summary.csv",
+  "growth_rate_window": "Day 1 to Day 5",
+  "growth_rate_formula": "(Day 5 - Day 1) / 4",
+  "day_9_handling": "Later follow-up only",
+  "accepted_script07_statuses": [
+    "CHECK",
+    "PASS"
+  ],
+  "missing_record_count": 1,
+  "report_format": "PDF",
+  "report_file": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Second Trial\\08_MS_Treatment_Comparison\\_reports\\ms_treatment_visual_summary.pdf",
+  "interpretation_note": "If source MS bands are not calibrated reflectance products, NDVI and NDRE should be described as relative image-derived indices.",
+  "tray_design": [
+    {
+      "tray_no": 1,
+      "treatment": "No Microbes",
+      "environment": "Inside",
+      "interaction": "No Microbes | Inside"
+    },
+    {
+      "tray_no": 2,
+      "treatment": "No Microbes",
+      "environment": "Inside",
+      "interaction": "No Microbes | Inside"
+    },
+    {
+      "tray_no": 3,
+      "treatment": "No Microbes",
+      "environment": "Outside",
+      "interaction": "No Microbes | Outside"
+    },
+    {
+      "tray_no": 4,
+      "treatment": "No Microbes",
+      "environment": "Outside",
+      "interaction": "No Microbes | Outside"
+    },
+    {
+      "tray_no": 5,
+      "treatment": "Microbes",
+      "environment": "Inside",
+      "interaction": "Microbes | Inside"
+    },
+    {
+      "tray_no": 6,
+      "treatment": "Microbes",
+      "environment": "Outside",
+      "interaction": "Microbes | Outside"
+    },
+    {
+      "tray_no": 7,
+      "treatment": "Microbes",
+      "environment": "Outside",
+      "interaction": "Microbes | Outside"
+    },
+    {
+      "tray_no": 8,
+      "treatment": "Microbes",
+      "environment": "Inside",
+      "interaction": "Microbes | Inside"
+    }
+  ]
+}

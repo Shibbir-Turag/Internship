@@ -1,0 +1,14 @@
+{
+  "purpose": "Third Trial D/RGB 70-cell square grid detection",
+  "input_root": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\01_Crop_Dual_Reference",
+  "output_root": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\03_Cell_Grid_Detection",
+  "rows": 7,
+  "columns": 10,
+  "expected_cells": 70,
+  "square_zone_ratio": 0.9,
+  "pass_min_direct_cells": 60,
+  "pass_max_grid_error": 0.16,
+  "check_min_direct_cells": 45,
+  "check_max_grid_error": 0.3,
+  "day7_bug_note": "Day 7 may include bug-eaten plants. This grid-detection script does not adjust growth values. Later scripts should preserve both observed and adjusted/imputed Day 7 values."
+}

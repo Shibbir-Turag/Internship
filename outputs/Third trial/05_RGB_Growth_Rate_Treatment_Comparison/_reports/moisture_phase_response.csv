@@ -1,1 +1,29 @@
-
+moisture_phase,moisture_watered_today,microbe_status,fixed_environment,day_order,day,days_since_day1,tray_count,mean_tracked_emergence_percent,mean_observed_green_cover_percent,mean_adjusted_green_cover_percent,mean_day7_imputed_cells
+After Day 0 watering; not watered,No,Microbes,Inside,1,Day 1,0,1,2.857142857142857,0.0016611825111769916,0.0016611825111769916,0.0
+After Day 0 watering; not watered,No,Microbes,Outside,1,Day 1,0,1,2.857142857142857,0.0010941257590851299,0.0010941257590851299,0.0
+After Day 0 watering; not watered,No,No Microbes,Inside,1,Day 1,0,1,2.857142857142857,0.0013408577032670542,0.0013408577032670542,0.0
+After Day 0 watering; not watered,No,No Microbes,Outside,1,Day 1,0,1,1.4285714285714286,0.0007056795348858472,0.0007056795348858472,0.0
+Dry period after Day 0 watering,No,Microbes,Inside,2,Day 2,1,1,74.28571428571429,0.3744471818622769,0.3744471818622769,0.0
+Dry period after Day 0 watering,No,Microbes,Outside,2,Day 2,1,1,12.857142857142856,0.01314520372175114,0.01314520372175114,0.0
+Dry period after Day 0 watering,No,No Microbes,Inside,2,Day 2,1,1,45.714285714285715,0.1184615406568711,0.1184615406568711,0.0
+Dry period after Day 0 watering,No,No Microbes,Outside,2,Day 2,1,1,30.0,0.04988671682230379,0.04988671682230379,0.0
+Watered on Day 3,Yes,Microbes,Inside,3,Day 3,2,1,100.0,1.6033273339037304,1.6033273339037304,0.0
+Watered on Day 3,Yes,Microbes,Outside,3,Day 3,2,1,68.57142857142857,0.39545646772670984,0.39545646772670984,0.0
+Watered on Day 3,Yes,No Microbes,Inside,3,Day 3,2,1,92.85714285714286,0.9698267686392453,0.9698267686392453,0.0
+Watered on Day 3,Yes,No Microbes,Outside,3,Day 3,2,1,87.14285714285714,0.718056454546993,0.718056454546993,0.0
+Dry period after Day 3 watering,No,Microbes,Inside,4,Day 4,3,1,100.0,3.14050087959599,3.14050087959599,0.0
+Dry period after Day 3 watering,No,Microbes,Outside,4,Day 4,3,1,85.71428571428571,0.8488495890952817,0.8488495890952817,0.0
+Dry period after Day 3 watering,No,No Microbes,Inside,4,Day 4,3,1,98.57142857142858,1.7862876075727436,1.7862876075727436,0.0
+Dry period after Day 3 watering,No,No Microbes,Outside,4,Day 4,3,1,92.85714285714286,1.1709389478646042,1.1709389478646042,0.0
+Dry period after Day 3 watering,No,Microbes,Inside,5,Day 5,4,1,100.0,3.941825649475573,3.941825649475573,0.0
+Dry period after Day 3 watering,No,Microbes,Outside,5,Day 5,4,1,94.28571428571428,1.2478141217216523,1.2478141217216523,0.0
+Dry period after Day 3 watering,No,No Microbes,Inside,5,Day 5,4,1,98.57142857142858,2.2509072256693696,2.2509072256693696,0.0
+Dry period after Day 3 watering,No,No Microbes,Outside,5,Day 5,4,1,94.28571428571428,1.6487286733505826,1.6487286733505826,0.0
+Watered on Day 6,Yes,Microbes,Inside,6,Day 6,5,1,100.0,5.039260155148821,5.039260155148821,0.0
+Watered on Day 6,Yes,Microbes,Outside,6,Day 6,5,1,95.71428571428572,1.7540522417306719,1.7540522417306719,0.0
+Watered on Day 6,Yes,No Microbes,Inside,6,Day 6,5,1,98.57142857142858,3.027833694565768,3.027833694565768,0.0
+Watered on Day 6,Yes,No Microbes,Outside,6,Day 6,5,1,95.71428571428572,2.396484264673477,2.396484264673477,0.0
+Unwatered after Day 6; final photo,No,Microbes,Inside,7,Day 7,8,1,100.0,0.9386016742469449,6.62066558180275,45.0
+Unwatered after Day 6; final photo,No,Microbes,Outside,7,Day 7,8,1,95.71428571428572,3.0903016365391056,3.0903016365391056,0.0
+Unwatered after Day 6; final photo,No,No Microbes,Inside,7,Day 7,8,1,98.57142857142858,5.860036257077001,6.421607794667051,9.0
+Unwatered after Day 6; final photo,No,No Microbes,Outside,7,Day 7,8,1,95.71428571428572,3.631559916637667,3.6354248011797856,2.0

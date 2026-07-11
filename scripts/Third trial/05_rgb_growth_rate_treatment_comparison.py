@@ -17,8 +17,9 @@ This script DOES:
 - compare Ideal vs Heat vs Moisture
 - compare Microbes x Treatment groups
 - compare fixed Inside/Outside placement for Ideal and Moisture trays
+- create a dedicated Ideal/Moisture Inside-vs-Outside comparison table
 - summarise Heat and Moisture phase responses descriptively
-- create CSV, Excel, chart, and PDF outputs
+- create CSV, Excel, chart, PDF, and Word report outputs
 
 This script DOES NOT:
 - alter Script 04 outputs
@@ -41,7 +42,18 @@ The adjusted estimate is clearly flagged with:
 - imputation_method
 - previous_growth_rate_pp_per_day
 
-This keeps observed and adjusted analysis separate.
+Important Inside/Outside rule
+-----------------------------
+Inside vs Outside comparison is only valid for fixed-position Ideal and Moisture
+trays. Heat trays are excluded from this direct comparison because their
+environment changed during the trial.
+
+New output added
+----------------
+A short Word report is generated at:
+
+    outputs/Third trial/05_RGB_Growth_Rate_Treatment_Comparison/_reports/
+        rgb_growth_treatment_short_report.docx
 """
 
 import argparse
@@ -61,7 +73,7 @@ from openpyxl.styles import Alignment, Font, PatternFill
 
 
 # ============================================================
-# 1) PATHS — CHANGE PROJECT_ROOT ONLY IF NEEDED
+# 1) PATHS
 # ============================================================
 
 PROJECT_ROOT = Path(
@@ -109,6 +121,16 @@ CONFIG_ROOT = OUTPUT_ROOT / "_config"
 
 EXPECTED_CELLS = 70
 
+EXPECTED_OBSERVATION_DAYS = [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+]
+
 DAY_LABELS = {
     1: "Day 1",
     2: "Day 2",
@@ -119,7 +141,35 @@ DAY_LABELS = {
     7: "Day 7",
 }
 
-EXPECTED_OBSERVATION_DAYS = [1, 2, 3, 4, 5, 6, 7]
+DATE_MAP = {
+    1: "2026-06-29",
+    2: "2026-06-30",
+    3: "2026-07-01",
+    4: "2026-07-02",
+    5: "2026-07-03",
+    6: "2026-07-04",
+    7: "2026-07-07",
+}
+
+ELAPSED_DAY_MAP = {
+    1: 0,
+    2: 1,
+    3: 2,
+    4: 3,
+    5: 4,
+    6: 5,
+    7: 8,
+}
+
+PREVIOUS_PHOTO_INTERVAL_MAP = {
+    1: "",
+    2: 1,
+    3: 1,
+    4: 1,
+    5: 1,
+    6: 1,
+    7: 3,
+}
 
 MICROBE_ORDER = [
     "No Microbes",
@@ -132,7 +182,11 @@ TREATMENT_ORDER = [
     "Moisture",
 ]
 
-# Used for descriptive performance score only.
+FIXED_ENVIRONMENT_TREATMENTS = [
+    "Ideal",
+    "Moisture",
+]
+
 PERFORMANCE_COMPONENTS_OBSERVED = [
     "final_tracked_emergence_percent",
     "final_observed_green_cover_percent",
@@ -149,7 +203,7 @@ PERFORMANCE_COMPONENTS_ADJUSTED = [
 
 
 # ============================================================
-# 3) OPTIONAL PDF IMPORTS
+# 3) OPTIONAL REPORT IMPORTS
 # ============================================================
 
 try:
@@ -172,17 +226,19 @@ except Exception:
     REPORTLAB_AVAILABLE = False
 
 
+try:
+    from docx import Document
+    from docx.shared import Inches, Pt
+    from docx.enum.text import WD_ALIGN_PARAGRAPH
+
+    DOCX_AVAILABLE = True
+except Exception:
+    DOCX_AVAILABLE = False
+
+
 # ============================================================
 # 4) GENERAL HELPERS
 # ============================================================
-
-def normalise(value: object) -> str:
-    return re.sub(
-        r"[^a-z0-9]+",
-        "",
-        str(value).casefold(),
-    )
-
 
 def natural_key(value: object):
     return [
@@ -239,56 +295,6 @@ def safe_numeric(
     return dataframe
 
 
-def minmax_score(series: pd.Series) -> pd.Series:
-    values = pd.to_numeric(series, errors="coerce")
-    valid = values.dropna()
-
-    if valid.empty:
-        return pd.Series(
-            [math.nan] * len(values),
-            index=values.index,
-        )
-
-    minimum = valid.min()
-    maximum = valid.max()
-
-    if maximum == minimum:
-        return pd.Series(
-            [
-                50.0 if pd.notna(value) else math.nan
-                for value in values
-            ],
-            index=values.index,
-        )
-
-    return (values - minimum) / (maximum - minimum) * 100.0
-
-
-def inverse_minmax_score(series: pd.Series) -> pd.Series:
-    values = pd.to_numeric(series, errors="coerce")
-    valid = values.dropna()
-
-    if valid.empty:
-        return pd.Series(
-            [math.nan] * len(values),
-            index=values.index,
-        )
-
-    minimum = valid.min()
-    maximum = valid.max()
-
-    if maximum == minimum:
-        return pd.Series(
-            [
-                50.0 if pd.notna(value) else math.nan
-                for value in values
-            ],
-            index=values.index,
-        )
-
-    return (maximum - values) / (maximum - minimum) * 100.0
-
-
 def safe_round_dataframe(
     dataframe: pd.DataFrame,
     decimals: int = 4,
@@ -304,16 +310,110 @@ def safe_round_dataframe(
     return output
 
 
-def group_sort_key(value: object):
-    text = str(value)
+def minmax_score(series: pd.Series) -> pd.Series:
+    values = pd.to_numeric(
+        series,
+        errors="coerce",
+    )
 
-    if text in MICROBE_ORDER:
-        return MICROBE_ORDER.index(text)
+    valid = values.dropna()
 
-    if text in TREATMENT_ORDER:
-        return TREATMENT_ORDER.index(text)
+    if valid.empty:
+        return pd.Series(
+            [math.nan] * len(values),
+            index=values.index,
+        )
 
-    return 999
+    minimum = valid.min()
+    maximum = valid.max()
+
+    if maximum == minimum:
+        return pd.Series(
+            [
+                50.0 if pd.notna(value) else math.nan
+                for value in values
+            ],
+            index=values.index,
+        )
+
+    return (
+        values
+        - minimum
+    ) / (
+        maximum
+        - minimum
+    ) * 100.0
+
+
+def inverse_minmax_score(series: pd.Series) -> pd.Series:
+    values = pd.to_numeric(
+        series,
+        errors="coerce",
+    )
+
+    valid = values.dropna()
+
+    if valid.empty:
+        return pd.Series(
+            [math.nan] * len(values),
+            index=values.index,
+        )
+
+    minimum = valid.min()
+    maximum = valid.max()
+
+    if maximum == minimum:
+        return pd.Series(
+            [
+                50.0 if pd.notna(value) else math.nan
+                for value in values
+            ],
+            index=values.index,
+        )
+
+    return (
+        maximum
+        - values
+    ) / (
+        maximum
+        - minimum
+    ) * 100.0
+
+
+def mean_or_nan(
+    dataframe: pd.DataFrame,
+    column: str,
+):
+    if dataframe.empty or column not in dataframe.columns:
+        return math.nan
+
+    return pd.to_numeric(
+        dataframe[column],
+        errors="coerce",
+    ).mean()
+
+
+def count_unique_or_zero(
+    dataframe: pd.DataFrame,
+    column: str,
+) -> int:
+    if dataframe.empty or column not in dataframe.columns:
+        return 0
+
+    return int(dataframe[column].nunique())
+
+
+def format_number(
+    value: object,
+    decimals: int = 2,
+) -> str:
+    try:
+        if pd.isna(value):
+            return "N/A"
+
+        return f"{float(value):.{decimals}f}"
+    except Exception:
+        return "N/A"
 
 
 # ============================================================
@@ -421,7 +521,6 @@ def load_script04_outputs() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
         ],
     )
 
-    # Keep only images that Script 04 processed successfully.
     tray["status"] = tray["status"].astype(str).str.upper()
 
     pass_tray = tray.loc[
@@ -438,47 +537,23 @@ def load_script04_outputs() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
 
     cell = cell.merge(
         pass_keys,
-        on=["day_order", "tray_no", "capture_id"],
+        on=[
+            "day_order",
+            "tray_no",
+            "capture_id",
+        ],
         how="inner",
     )
 
-    # Ensure dates and elapsed days exist even if Excel formatting changed.
-    elapsed_map = {
-        1: 0,
-        2: 1,
-        3: 2,
-        4: 3,
-        5: 4,
-        6: 5,
-        7: 8,
-    }
-
-    date_map = {
-        1: "2026-06-29",
-        2: "2026-06-30",
-        3: "2026-07-01",
-        4: "2026-07-02",
-        5: "2026-07-03",
-        6: "2026-07-04",
-        7: "2026-07-07",
-    }
-
-    previous_elapsed_map = {
-        1: "",
-        2: 1,
-        3: 1,
-        4: 1,
-        5: 1,
-        6: 1,
-        7: 3,
-    }
-
-    for frame in [pass_tray, cell]:
+    for frame in [
+        pass_tray,
+        cell,
+    ]:
         frame["day_order"] = frame["day_order"].astype(int)
 
         frame["calendar_date"] = frame.apply(
             lambda row: (
-                date_map.get(int(row["day_order"]), "")
+                DATE_MAP.get(int(row["day_order"]), "")
                 if pd.isna(row.get("calendar_date"))
                 or str(row.get("calendar_date")).strip() == ""
                 else str(row.get("calendar_date")).strip()
@@ -493,30 +568,27 @@ def load_script04_outputs() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
 
         frame["days_since_day1"] = frame.apply(
             lambda row: (
-                elapsed_map.get(int(row["day_order"]), math.nan)
+                ELAPSED_DAY_MAP.get(int(row["day_order"]), math.nan)
                 if pd.isna(row["days_since_day1"])
                 else row["days_since_day1"]
             ),
             axis=1,
         )
 
-        if "days_since_previous_photo" in frame.columns:
-            frame["days_since_previous_photo"] = pd.to_numeric(
-                frame["days_since_previous_photo"],
-                errors="coerce",
-            )
+        frame["days_since_previous_photo"] = pd.to_numeric(
+            frame.get("days_since_previous_photo", math.nan),
+            errors="coerce",
+        )
 
-            frame["days_since_previous_photo"] = frame.apply(
-                lambda row: (
-                    previous_elapsed_map.get(int(row["day_order"]), math.nan)
-                    if pd.isna(row["days_since_previous_photo"])
-                    else row["days_since_previous_photo"]
-                ),
-                axis=1,
-            )
+        frame["days_since_previous_photo"] = frame.apply(
+            lambda row: (
+                PREVIOUS_PHOTO_INTERVAL_MAP.get(int(row["day_order"]), math.nan)
+                if pd.isna(row["days_since_previous_photo"])
+                else row["days_since_previous_photo"]
+            ),
+            axis=1,
+        )
 
-    # Standard grouping columns.
-    for frame in [pass_tray, cell]:
         frame["microbe_status"] = frame["microbe_status"].astype(str).str.strip()
         frame["treatment"] = frame["treatment"].astype(str).str.strip()
         frame["label_environment"] = frame["label_environment"].astype(str).str.strip()
@@ -553,7 +625,9 @@ def load_script04_outputs() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
 # 6) DAY 7 ADJUSTMENT / IMPUTATION
 # ============================================================
 
-def estimate_adjusted_day7_for_group(group: pd.DataFrame) -> pd.DataFrame:
+def estimate_adjusted_day7_for_group(
+    group: pd.DataFrame,
+) -> pd.DataFrame:
     group = group.sort_values(
         "day_order"
     ).copy()
@@ -633,7 +707,8 @@ def estimate_adjusted_day7_for_group(group: pd.DataFrame) -> pd.DataFrame:
         previous_elapsed = float(previous_row["days_since_day1"])
 
         elapsed_difference = max(
-            last_elapsed - previous_elapsed,
+            last_elapsed
+            - previous_elapsed,
             1e-9,
         )
 
@@ -642,12 +717,16 @@ def estimate_adjusted_day7_for_group(group: pd.DataFrame) -> pd.DataFrame:
             - previous_green
         ) / elapsed_difference
 
-        # For bug-eaten correction, do not force a negative growth projection.
-        slope = max(0.0, raw_slope)
+        slope = max(
+            0.0,
+            raw_slope,
+        )
 
     day7_elapsed = float(day7_row["days_since_day1"])
+
     elapsed_to_day7 = max(
-        day7_elapsed - last_elapsed,
+        day7_elapsed
+        - last_elapsed,
         0.0,
     )
 
@@ -718,11 +797,16 @@ def estimate_adjusted_day7_for_group(group: pd.DataFrame) -> pd.DataFrame:
     return group
 
 
-def create_adjusted_cell_table(cell: pd.DataFrame) -> pd.DataFrame:
+def create_adjusted_cell_table(
+    cell: pd.DataFrame,
+) -> pd.DataFrame:
     adjusted_groups = []
 
     for (_tray_no, _cell_id), group in cell.groupby(
-        ["tray_no", "cell_id"],
+        [
+            "tray_no",
+            "cell_id",
+        ],
         sort=True,
     ):
         adjusted_groups.append(
@@ -755,7 +839,7 @@ def create_adjusted_cell_table(cell: pd.DataFrame) -> pd.DataFrame:
 
 
 # ============================================================
-# 7) TRAY DAILY METRICS FROM CELL TABLE
+# 7) TRAY DAILY METRICS
 # ============================================================
 
 def create_tray_daily_metrics(
@@ -771,9 +855,12 @@ def create_tray_daily_metrics(
         "tracked_visible_emerged"
     ].apply(parse_yes)
 
-    adjusted_cell["newly_emerged_bool"] = adjusted_cell[
-        "newly_emerged_today"
-    ].apply(parse_yes) if "newly_emerged_today" in adjusted_cell.columns else False
+    if "newly_emerged_today" in adjusted_cell.columns:
+        adjusted_cell["newly_emerged_bool"] = adjusted_cell[
+            "newly_emerged_today"
+        ].apply(parse_yes)
+    else:
+        adjusted_cell["newly_emerged_bool"] = False
 
     group_columns = [
         "day_order",
@@ -863,7 +950,7 @@ def create_tray_daily_metrics(
 
 
 # ============================================================
-# 8) TRAY-LEVEL GROWTH METRICS
+# 8) TRAY GROWTH METRICS
 # ============================================================
 
 def value_for_day(
@@ -876,7 +963,10 @@ def value_for_day(
     if row is None:
         return math.nan
 
-    return row.get(column, math.nan)
+    return row.get(
+        column,
+        math.nan,
+    )
 
 
 def elapsed_for_day(
@@ -996,20 +1086,10 @@ def t50_elapsed_days(
 def create_first_emergence_metrics(
     adjusted_cell: pd.DataFrame,
 ) -> pd.DataFrame:
-    frame = adjusted_cell.copy()
+    if "first_visible_emergence_day_order" not in adjusted_cell.columns:
+        return pd.DataFrame()
 
-    if "first_visible_emergence_day_order" not in frame.columns:
-        return pd.DataFrame(
-            columns=[
-                "tray_no",
-                "mean_first_visible_emergence_day_order",
-                "median_first_visible_emergence_day_order",
-                "mean_first_visible_emergence_elapsed_days",
-                "median_first_visible_emergence_elapsed_days",
-            ]
-        )
-
-    first = frame[
+    first = adjusted_cell[
         [
             "tray_no",
             "cell_id",
@@ -1028,21 +1108,10 @@ def create_first_emergence_metrics(
         errors="coerce",
     )
 
-    elapsed_map = (
-        frame[
-            [
-                "day_order",
-                "days_since_day1",
-            ]
-        ]
-        .drop_duplicates()
-        .dropna()
-    )
-
     elapsed_lookup = dict(
         zip(
-            elapsed_map["day_order"].astype(int),
-            elapsed_map["days_since_day1"],
+            adjusted_cell["day_order"].astype(int),
+            adjusted_cell["days_since_day1"],
         )
     )
 
@@ -1059,15 +1128,7 @@ def create_first_emergence_metrics(
     )
 
     if first.empty:
-        return pd.DataFrame(
-            columns=[
-                "tray_no",
-                "mean_first_visible_emergence_day_order",
-                "median_first_visible_emergence_day_order",
-                "mean_first_visible_emergence_elapsed_days",
-                "median_first_visible_emergence_elapsed_days",
-            ]
-        )
+        return pd.DataFrame()
 
     return (
         first.groupby(
@@ -1103,48 +1164,13 @@ def create_tray_growth_metrics(
 
     for tray_no, group in tray_daily.groupby("tray_no"):
         group = group.sort_values("day_order")
+
         rows_by_day = {
             int(row["day_order"]): row
             for _, row in group.iterrows()
         }
 
         reference = group.iloc[0]
-
-        day1_emergence = value_for_day(
-            rows_by_day,
-            1,
-            "tracked_emergence_percent",
-        )
-
-        day7_emergence = value_for_day(
-            rows_by_day,
-            7,
-            "tracked_emergence_percent",
-        )
-
-        day1_observed_green = value_for_day(
-            rows_by_day,
-            1,
-            "observed_green_cover_percent",
-        )
-
-        day7_observed_green = value_for_day(
-            rows_by_day,
-            7,
-            "observed_green_cover_percent",
-        )
-
-        day1_adjusted_green = value_for_day(
-            rows_by_day,
-            1,
-            "adjusted_green_cover_percent",
-        )
-
-        day7_adjusted_green = value_for_day(
-            rows_by_day,
-            7,
-            "adjusted_green_cover_percent",
-        )
 
         final_day = int(group["day_order"].max())
         final_row = rows_by_day[final_day]
@@ -1163,64 +1189,29 @@ def create_tray_growth_metrics(
             "final_day_order": final_day,
             "final_calendar_date": str(final_row["calendar_date"]),
             "final_days_since_day1": float(final_row["days_since_day1"]),
-            "day1_tracked_emergence_percent": day1_emergence,
-            "final_tracked_emergence_percent": day7_emergence,
-            "day1_observed_green_cover_percent": day1_observed_green,
-            "final_observed_green_cover_percent": day7_observed_green,
-            "day1_adjusted_green_cover_percent": day1_adjusted_green,
-            "final_adjusted_green_cover_percent": day7_adjusted_green,
-            "day7_imputed_cells": value_for_day(
-                rows_by_day,
-                7,
-                "day7_imputed_cells",
-            ),
-            "day7_mean_adjustment_difference_pp": value_for_day(
-                rows_by_day,
-                7,
-                "mean_adjustment_difference_pp",
-            ),
-            "emergence_rate_day1_to_day7_pp_per_day": rate_between_days(
-                rows_by_day,
-                1,
-                7,
-                "tracked_emergence_percent",
-            ),
-            "observed_green_cover_rate_day1_to_day7_pp_per_day": rate_between_days(
-                rows_by_day,
-                1,
-                7,
-                "observed_green_cover_percent",
-            ),
-            "adjusted_green_cover_rate_day1_to_day7_pp_per_day": rate_between_days(
-                rows_by_day,
-                1,
-                7,
-                "adjusted_green_cover_percent",
-            ),
-            "observed_green_cover_rate_day1_to_day6_pp_per_day": rate_between_days(
-                rows_by_day,
-                1,
-                6,
-                "observed_green_cover_percent",
-            ),
-            "adjusted_green_cover_rate_day1_to_day6_pp_per_day": rate_between_days(
-                rows_by_day,
-                1,
-                6,
-                "adjusted_green_cover_percent",
-            ),
-            "observed_green_cover_rate_day6_to_day7_pp_per_day": rate_between_days(
-                rows_by_day,
-                6,
-                7,
-                "observed_green_cover_percent",
-            ),
-            "adjusted_green_cover_rate_day6_to_day7_pp_per_day": rate_between_days(
-                rows_by_day,
-                6,
-                7,
-                "adjusted_green_cover_percent",
-            ),
+
+            "day1_tracked_emergence_percent": value_for_day(rows_by_day, 1, "tracked_emergence_percent"),
+            "final_tracked_emergence_percent": value_for_day(rows_by_day, 7, "tracked_emergence_percent"),
+
+            "day1_observed_green_cover_percent": value_for_day(rows_by_day, 1, "observed_green_cover_percent"),
+            "final_observed_green_cover_percent": value_for_day(rows_by_day, 7, "observed_green_cover_percent"),
+
+            "day1_adjusted_green_cover_percent": value_for_day(rows_by_day, 1, "adjusted_green_cover_percent"),
+            "final_adjusted_green_cover_percent": value_for_day(rows_by_day, 7, "adjusted_green_cover_percent"),
+
+            "day7_imputed_cells": value_for_day(rows_by_day, 7, "day7_imputed_cells"),
+            "day7_mean_adjustment_difference_pp": value_for_day(rows_by_day, 7, "mean_adjustment_difference_pp"),
+
+            "emergence_rate_day1_to_day7_pp_per_day": rate_between_days(rows_by_day, 1, 7, "tracked_emergence_percent"),
+            "observed_green_cover_rate_day1_to_day7_pp_per_day": rate_between_days(rows_by_day, 1, 7, "observed_green_cover_percent"),
+            "adjusted_green_cover_rate_day1_to_day7_pp_per_day": rate_between_days(rows_by_day, 1, 7, "adjusted_green_cover_percent"),
+
+            "observed_green_cover_rate_day1_to_day6_pp_per_day": rate_between_days(rows_by_day, 1, 6, "observed_green_cover_percent"),
+            "adjusted_green_cover_rate_day1_to_day6_pp_per_day": rate_between_days(rows_by_day, 1, 6, "adjusted_green_cover_percent"),
+
+            "observed_green_cover_rate_day6_to_day7_pp_per_day": rate_between_days(rows_by_day, 6, 7, "observed_green_cover_percent"),
+            "adjusted_green_cover_rate_day6_to_day7_pp_per_day": rate_between_days(rows_by_day, 6, 7, "adjusted_green_cover_percent"),
+
             "observed_day7_change_from_day6_pp": (
                 value_for_day(rows_by_day, 7, "observed_green_cover_percent")
                 - value_for_day(rows_by_day, 6, "observed_green_cover_percent")
@@ -1229,10 +1220,8 @@ def create_tray_growth_metrics(
                 value_for_day(rows_by_day, 7, "adjusted_green_cover_percent")
                 - value_for_day(rows_by_day, 6, "adjusted_green_cover_percent")
             ),
-            "t50_elapsed_days": t50_elapsed_days(
-                group,
-                "tracked_emergence_percent",
-            ),
+
+            "t50_elapsed_days": t50_elapsed_days(group),
         }
 
         records.append(record)
@@ -1251,16 +1240,12 @@ def create_tray_growth_metrics(
             validate="one_to_one",
         )
 
-    # Descriptive observed performance score.
     for component in PERFORMANCE_COMPONENTS_OBSERVED:
-        score_column = f"{component}_observed_score"
-
-        if component in metrics.columns:
-            metrics[score_column] = minmax_score(
-                metrics[component]
-            )
-        else:
-            metrics[score_column] = math.nan
+        metrics[f"{component}_observed_score"] = (
+            minmax_score(metrics[component])
+            if component in metrics.columns
+            else math.nan
+        )
 
     observed_score_columns = [
         f"{component}_observed_score"
@@ -1287,16 +1272,12 @@ def create_tray_growth_metrics(
         method="min",
     ).astype("Int64")
 
-    # Descriptive adjusted performance score.
     for component in PERFORMANCE_COMPONENTS_ADJUSTED:
-        score_column = f"{component}_adjusted_score"
-
-        if component in metrics.columns:
-            metrics[score_column] = minmax_score(
-                metrics[component]
-            )
-        else:
-            metrics[score_column] = math.nan
+        metrics[f"{component}_adjusted_score"] = (
+            minmax_score(metrics[component])
+            if component in metrics.columns
+            else math.nan
+        )
 
     adjusted_score_columns = [
         f"{component}_adjusted_score"
@@ -1333,7 +1314,7 @@ def create_tray_growth_metrics(
 
 
 # ============================================================
-# 9) GROUP DAILY AND GROUP GROWTH TABLES
+# 9) GROUP TABLES
 # ============================================================
 
 def create_group_daily(
@@ -1354,38 +1335,14 @@ def create_group_daily(
         )
         .agg(
             tray_count=("tray_no", "nunique"),
-            mean_tracked_emergence_percent=(
-                "tracked_emergence_percent",
-                "mean",
-            ),
-            sd_tracked_emergence_percent=(
-                "tracked_emergence_percent",
-                "std",
-            ),
-            mean_observed_green_cover_percent=(
-                "observed_green_cover_percent",
-                "mean",
-            ),
-            sd_observed_green_cover_percent=(
-                "observed_green_cover_percent",
-                "std",
-            ),
-            mean_adjusted_green_cover_percent=(
-                "adjusted_green_cover_percent",
-                "mean",
-            ),
-            sd_adjusted_green_cover_percent=(
-                "adjusted_green_cover_percent",
-                "std",
-            ),
-            mean_newly_emerged_cells=(
-                "newly_emerged_cells",
-                "mean",
-            ),
-            mean_day7_imputed_cells=(
-                "day7_imputed_cells",
-                "mean",
-            ),
+            mean_tracked_emergence_percent=("tracked_emergence_percent", "mean"),
+            sd_tracked_emergence_percent=("tracked_emergence_percent", "std"),
+            mean_observed_green_cover_percent=("observed_green_cover_percent", "mean"),
+            sd_observed_green_cover_percent=("observed_green_cover_percent", "std"),
+            mean_adjusted_green_cover_percent=("adjusted_green_cover_percent", "mean"),
+            sd_adjusted_green_cover_percent=("adjusted_green_cover_percent", "std"),
+            mean_newly_emerged_cells=("newly_emerged_cells", "mean"),
+            mean_day7_imputed_cells=("day7_imputed_cells", "mean"),
         )
         .rename(
             columns={
@@ -1500,45 +1457,160 @@ def create_all_group_tables(
             )
         )
 
-    daily = pd.concat(
+    group_daily = pd.concat(
         daily_parts,
         ignore_index=True,
     )
 
-    growth = pd.concat(
+    group_growth = pd.concat(
         growth_parts,
         ignore_index=True,
     )
 
-    daily["group_sort"] = daily["group"].apply(group_sort_key)
-    growth["group_sort"] = growth["group"].apply(group_sort_key)
-
-    daily = daily.sort_values(
-        [
-            "group_type",
-            "group_sort",
-            "group",
-            "day_order",
-        ]
-    ).drop(
-        columns=["group_sort"]
-    ).reset_index(drop=True)
-
-    growth = growth.sort_values(
-        [
-            "group_type",
-            "group_sort",
-            "group",
-        ]
-    ).drop(
-        columns=["group_sort"]
-    ).reset_index(drop=True)
-
-    return daily, growth
+    return group_daily, group_growth
 
 
 # ============================================================
-# 10) PHASE-RESPONSE TABLES
+# 10) DEDICATED IDEAL/MOISTURE INSIDE VS OUTSIDE COMPARISON
+# ============================================================
+
+def create_inside_outside_comparison(
+    tray_metrics: pd.DataFrame,
+) -> pd.DataFrame:
+    rows = []
+
+    for treatment in FIXED_ENVIRONMENT_TREATMENTS:
+        subset = tray_metrics.loc[
+            tray_metrics["treatment"].astype(str).str.casefold().eq(
+                treatment.casefold()
+            )
+        ].copy()
+
+        inside = subset.loc[
+            subset["label_environment"].astype(str).str.casefold().eq("inside")
+        ].copy()
+
+        outside = subset.loc[
+            subset["label_environment"].astype(str).str.casefold().eq("outside")
+        ].copy()
+
+        row = {
+            "treatment": treatment,
+
+            "inside_tray_count": count_unique_or_zero(inside, "tray_no"),
+            "outside_tray_count": count_unique_or_zero(outside, "tray_no"),
+
+            "inside_trays": ", ".join(inside["tray"].astype(str).tolist()),
+            "outside_trays": ", ".join(outside["tray"].astype(str).tolist()),
+
+            "inside_final_emergence_percent": mean_or_nan(
+                inside,
+                "final_tracked_emergence_percent",
+            ),
+            "outside_final_emergence_percent": mean_or_nan(
+                outside,
+                "final_tracked_emergence_percent",
+            ),
+
+            "inside_final_observed_green_cover_percent": mean_or_nan(
+                inside,
+                "final_observed_green_cover_percent",
+            ),
+            "outside_final_observed_green_cover_percent": mean_or_nan(
+                outside,
+                "final_observed_green_cover_percent",
+            ),
+
+            "inside_final_adjusted_green_cover_percent": mean_or_nan(
+                inside,
+                "final_adjusted_green_cover_percent",
+            ),
+            "outside_final_adjusted_green_cover_percent": mean_or_nan(
+                outside,
+                "final_adjusted_green_cover_percent",
+            ),
+
+            "inside_emergence_rate_pp_per_day": mean_or_nan(
+                inside,
+                "emergence_rate_day1_to_day7_pp_per_day",
+            ),
+            "outside_emergence_rate_pp_per_day": mean_or_nan(
+                outside,
+                "emergence_rate_day1_to_day7_pp_per_day",
+            ),
+
+            "inside_adjusted_green_cover_rate_pp_per_day": mean_or_nan(
+                inside,
+                "adjusted_green_cover_rate_day1_to_day7_pp_per_day",
+            ),
+            "outside_adjusted_green_cover_rate_pp_per_day": mean_or_nan(
+                outside,
+                "adjusted_green_cover_rate_day1_to_day7_pp_per_day",
+            ),
+
+            "inside_t50_elapsed_days": mean_or_nan(
+                inside,
+                "t50_elapsed_days",
+            ),
+            "outside_t50_elapsed_days": mean_or_nan(
+                outside,
+                "t50_elapsed_days",
+            ),
+
+            "inside_overall_adjusted_rgb_score": mean_or_nan(
+                inside,
+                "overall_adjusted_rgb_score",
+            ),
+            "outside_overall_adjusted_rgb_score": mean_or_nan(
+                outside,
+                "overall_adjusted_rgb_score",
+            ),
+        }
+
+        row["inside_minus_outside_final_emergence_pp"] = (
+            row["inside_final_emergence_percent"]
+            - row["outside_final_emergence_percent"]
+        )
+
+        row["inside_minus_outside_adjusted_green_cover_pp"] = (
+            row["inside_final_adjusted_green_cover_percent"]
+            - row["outside_final_adjusted_green_cover_percent"]
+        )
+
+        row["inside_minus_outside_adjusted_growth_rate_pp_per_day"] = (
+            row["inside_adjusted_green_cover_rate_pp_per_day"]
+            - row["outside_adjusted_green_cover_rate_pp_per_day"]
+        )
+
+        row["inside_minus_outside_overall_score"] = (
+            row["inside_overall_adjusted_rgb_score"]
+            - row["outside_overall_adjusted_rgb_score"]
+        )
+
+        if pd.isna(row["inside_minus_outside_adjusted_green_cover_pp"]):
+            interpretation = "Insufficient data for comparison."
+        elif row["inside_minus_outside_adjusted_green_cover_pp"] > 0:
+            interpretation = (
+                "Inside performed higher than Outside for adjusted Day 7 RGB green-cover."
+            )
+        elif row["inside_minus_outside_adjusted_green_cover_pp"] < 0:
+            interpretation = (
+                "Outside performed higher than Inside for adjusted Day 7 RGB green-cover."
+            )
+        else:
+            interpretation = (
+                "Inside and Outside were equal for adjusted Day 7 RGB green-cover."
+            )
+
+        row["interpretation"] = interpretation
+
+        rows.append(row)
+
+    return pd.DataFrame(rows)
+
+
+# ============================================================
+# 11) PHASE TABLES
 # ============================================================
 
 def create_phase_tables(
@@ -1552,7 +1624,7 @@ def create_phase_tables(
         tray_daily["treatment"].astype(str).str.casefold().eq("moisture")
     ].copy()
 
-    if not heat.empty:
+    if not heat.empty and "heat_phase" in heat.columns:
         heat_phase = (
             heat.groupby(
                 [
@@ -1566,22 +1638,10 @@ def create_phase_tables(
             )
             .agg(
                 tray_count=("tray_no", "nunique"),
-                mean_tracked_emergence_percent=(
-                    "tracked_emergence_percent",
-                    "mean",
-                ),
-                mean_observed_green_cover_percent=(
-                    "observed_green_cover_percent",
-                    "mean",
-                ),
-                mean_adjusted_green_cover_percent=(
-                    "adjusted_green_cover_percent",
-                    "mean",
-                ),
-                mean_day7_imputed_cells=(
-                    "day7_imputed_cells",
-                    "mean",
-                ),
+                mean_tracked_emergence_percent=("tracked_emergence_percent", "mean"),
+                mean_observed_green_cover_percent=("observed_green_cover_percent", "mean"),
+                mean_adjusted_green_cover_percent=("adjusted_green_cover_percent", "mean"),
+                mean_day7_imputed_cells=("day7_imputed_cells", "mean"),
             )
             .sort_values(
                 [
@@ -1594,7 +1654,7 @@ def create_phase_tables(
     else:
         heat_phase = pd.DataFrame()
 
-    if not moisture.empty:
+    if not moisture.empty and "moisture_phase" in moisture.columns:
         moisture_phase = (
             moisture.groupby(
                 [
@@ -1610,22 +1670,10 @@ def create_phase_tables(
             )
             .agg(
                 tray_count=("tray_no", "nunique"),
-                mean_tracked_emergence_percent=(
-                    "tracked_emergence_percent",
-                    "mean",
-                ),
-                mean_observed_green_cover_percent=(
-                    "observed_green_cover_percent",
-                    "mean",
-                ),
-                mean_adjusted_green_cover_percent=(
-                    "adjusted_green_cover_percent",
-                    "mean",
-                ),
-                mean_day7_imputed_cells=(
-                    "day7_imputed_cells",
-                    "mean",
-                ),
+                mean_tracked_emergence_percent=("tracked_emergence_percent", "mean"),
+                mean_observed_green_cover_percent=("observed_green_cover_percent", "mean"),
+                mean_adjusted_green_cover_percent=("adjusted_green_cover_percent", "mean"),
+                mean_day7_imputed_cells=("day7_imputed_cells", "mean"),
             )
             .sort_values(
                 [
@@ -1643,7 +1691,7 @@ def create_phase_tables(
 
 
 # ============================================================
-# 11) CHARTS
+# 12) CHARTS
 # ============================================================
 
 def save_trend_chart(
@@ -1688,7 +1736,6 @@ def save_trend_chart(
     ticks = (
         subset[
             [
-                "day_order",
                 "day",
                 "days_since_day1",
             ]
@@ -1703,49 +1750,11 @@ def save_trend_chart(
     axis.set_xticks(ticks["days_since_day1"])
     axis.set_xticklabels(ticks["day"])
     axis.grid(True, axis="y", alpha=0.30)
-
-    axis.axvline(
-        5,
-        linestyle="--",
-        linewidth=1,
-        alpha=0.75,
-    )
-    axis.text(
-        5.08,
-        axis.get_ylim()[1] * 0.96,
-        "Day 6",
-        va="top",
-        fontsize=9,
-    )
-
-    axis.axvline(
-        8,
-        linestyle="--",
-        linewidth=1,
-        alpha=0.75,
-    )
-    axis.text(
-        8.08,
-        axis.get_ylim()[1] * 0.90,
-        "Day 7 final",
-        va="top",
-        fontsize=9,
-    )
-
     axis.legend(loc="best")
 
     figure.tight_layout()
-
-    output_path.parent.mkdir(
-        parents=True,
-        exist_ok=True,
-    )
-
-    figure.savefig(
-        output_path,
-        dpi=220,
-    )
-
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    figure.savefig(output_path, dpi=220)
     plt.close(figure)
 
 
@@ -1776,9 +1785,7 @@ def save_day7_observed_adjusted_chart(
         label="Adjusted Day 7",
     )
 
-    axis.set_title(
-        "Day 7 RGB green-cover: observed vs adjusted"
-    )
+    axis.set_title("Day 7 RGB green-cover: observed vs adjusted")
     axis.set_xlabel("Tray")
     axis.set_ylabel("Mean RGB green-cover (%)")
     axis.set_xticks(x)
@@ -1824,9 +1831,7 @@ def save_tray_ranking_chart(
         frame["overall_adjusted_rgb_score"],
     )
 
-    axis.set_title(
-        "Trial 3 tray ranking by adjusted RGB performance score"
-    )
+    axis.set_title("Trial 3 tray ranking by adjusted RGB performance score")
     axis.set_xlabel("Adjusted RGB performance score")
     axis.set_ylabel("Tray")
     axis.grid(True, axis="x", alpha=0.30)
@@ -1841,9 +1846,7 @@ def save_bug_imputed_cells_chart(
     tray_metrics: pd.DataFrame,
     output_path: Path,
 ) -> None:
-    frame = tray_metrics.sort_values(
-        "tray_no"
-    ).copy()
+    frame = tray_metrics.sort_values("tray_no").copy()
 
     if "day7_imputed_cells" not in frame.columns:
         return
@@ -1857,9 +1860,7 @@ def save_bug_imputed_cells_chart(
         frame["day7_imputed_cells"].fillna(0),
     )
 
-    axis.set_title(
-        "Possible Day 7 bug-eaten/missing cells flagged by tray"
-    )
+    axis.set_title("Possible Day 7 bug-eaten/missing cells flagged by tray")
     axis.set_xlabel("Tray")
     axis.set_ylabel("Cells flagged")
     axis.grid(True, axis="y", alpha=0.30)
@@ -1871,9 +1872,94 @@ def save_bug_imputed_cells_chart(
     plt.close(figure)
 
 
+def save_inside_outside_green_chart(
+    comparison: pd.DataFrame,
+    output_path: Path,
+) -> None:
+    if comparison.empty:
+        return
+
+    x = np.arange(len(comparison))
+    width = 0.36
+
+    figure, axis = plt.subplots(
+        figsize=(9.5, 5.8)
+    )
+
+    axis.bar(
+        x - width / 2,
+        comparison["inside_final_adjusted_green_cover_percent"],
+        width,
+        label="Inside",
+    )
+
+    axis.bar(
+        x + width / 2,
+        comparison["outside_final_adjusted_green_cover_percent"],
+        width,
+        label="Outside",
+    )
+
+    axis.set_title("Ideal and Moisture: Inside vs Outside adjusted Day 7 RGB green-cover")
+    axis.set_xlabel("Treatment")
+    axis.set_ylabel("Adjusted Day 7 RGB green-cover (%)")
+    axis.set_xticks(x)
+    axis.set_xticklabels(comparison["treatment"])
+    axis.grid(True, axis="y", alpha=0.30)
+    axis.legend(loc="best")
+
+    figure.tight_layout()
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    figure.savefig(output_path, dpi=220)
+    plt.close(figure)
+
+
+def save_inside_outside_emergence_chart(
+    comparison: pd.DataFrame,
+    output_path: Path,
+) -> None:
+    if comparison.empty:
+        return
+
+    x = np.arange(len(comparison))
+    width = 0.36
+
+    figure, axis = plt.subplots(
+        figsize=(9.5, 5.8)
+    )
+
+    axis.bar(
+        x - width / 2,
+        comparison["inside_final_emergence_percent"],
+        width,
+        label="Inside",
+    )
+
+    axis.bar(
+        x + width / 2,
+        comparison["outside_final_emergence_percent"],
+        width,
+        label="Outside",
+    )
+
+    axis.set_title("Ideal and Moisture: Inside vs Outside final visible emergence")
+    axis.set_xlabel("Treatment")
+    axis.set_ylabel("Final tracked visible emergence (%)")
+    axis.set_xticks(x)
+    axis.set_xticklabels(comparison["treatment"])
+    axis.grid(True, axis="y", alpha=0.30)
+    axis.legend(loc="best")
+
+    figure.tight_layout()
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    figure.savefig(output_path, dpi=220)
+    plt.close(figure)
+
+
 def create_charts(
     group_daily: pd.DataFrame,
     tray_metrics: pd.DataFrame,
+    inside_outside_comparison: pd.DataFrame,
 ) -> dict[str, Path]:
     CHARTS_ROOT.mkdir(
         parents=True,
@@ -1882,7 +1968,7 @@ def create_charts(
 
     charts = {}
 
-    chart_path = CHARTS_ROOT / "01_microbes_visible_emergence_trend.png"
+    path = CHARTS_ROOT / "01_microbes_visible_emergence_trend.png"
     save_trend_chart(
         group_daily,
         "Microbe Status",
@@ -1891,11 +1977,11 @@ def create_charts(
         "sd_tracked_emergence_percent",
         "Tracked visible emergence: Microbes vs No Microbes",
         "Mean tracked visible emergence (%)",
-        chart_path,
+        path,
     )
-    charts["microbes_emergence"] = chart_path
+    charts["microbes_emergence"] = path
 
-    chart_path = CHARTS_ROOT / "02_microbes_adjusted_green_cover_trend.png"
+    path = CHARTS_ROOT / "02_microbes_adjusted_green_cover_trend.png"
     save_trend_chart(
         group_daily,
         "Microbe Status",
@@ -1904,11 +1990,11 @@ def create_charts(
         "sd_adjusted_green_cover_percent",
         "Adjusted RGB green-cover: Microbes vs No Microbes",
         "Mean adjusted RGB green-cover (%)",
-        chart_path,
+        path,
     )
-    charts["microbes_green"] = chart_path
+    charts["microbes_green"] = path
 
-    chart_path = CHARTS_ROOT / "03_treatment_visible_emergence_trend.png"
+    path = CHARTS_ROOT / "03_treatment_visible_emergence_trend.png"
     save_trend_chart(
         group_daily,
         "Treatment Type",
@@ -1917,11 +2003,11 @@ def create_charts(
         "sd_tracked_emergence_percent",
         "Tracked visible emergence by treatment type",
         "Mean tracked visible emergence (%)",
-        chart_path,
+        path,
     )
-    charts["treatment_emergence"] = chart_path
+    charts["treatment_emergence"] = path
 
-    chart_path = CHARTS_ROOT / "04_treatment_adjusted_green_cover_trend.png"
+    path = CHARTS_ROOT / "04_treatment_adjusted_green_cover_trend.png"
     save_trend_chart(
         group_daily,
         "Treatment Type",
@@ -1930,57 +2016,50 @@ def create_charts(
         "sd_adjusted_green_cover_percent",
         "Adjusted RGB green-cover by treatment type",
         "Mean adjusted RGB green-cover (%)",
-        chart_path,
+        path,
     )
-    charts["treatment_green"] = chart_path
+    charts["treatment_green"] = path
 
-    treatment_environment_groups = sorted(
-        group_daily.loc[
-            group_daily["group_type"].eq("Treatment x Environment"),
-            "group",
-        ].dropna().unique(),
-        key=natural_key,
-    )
-
-    chart_path = CHARTS_ROOT / "05_treatment_environment_adjusted_green_cover_trend.png"
-    save_trend_chart(
-        group_daily,
-        "Treatment x Environment",
-        treatment_environment_groups,
-        "mean_adjusted_green_cover_percent",
-        "sd_adjusted_green_cover_percent",
-        "Adjusted RGB green-cover by treatment and environment",
-        "Mean adjusted RGB green-cover (%)",
-        chart_path,
-    )
-    charts["treatment_environment_green"] = chart_path
-
-    chart_path = CHARTS_ROOT / "06_day7_observed_vs_adjusted_green_cover_by_tray.png"
+    path = CHARTS_ROOT / "05_day7_observed_vs_adjusted_green_cover_by_tray.png"
     save_day7_observed_adjusted_chart(
         tray_metrics,
-        chart_path,
+        path,
     )
-    charts["day7_observed_adjusted"] = chart_path
+    charts["day7_observed_adjusted"] = path
 
-    chart_path = CHARTS_ROOT / "07_adjusted_rgb_tray_ranking.png"
+    path = CHARTS_ROOT / "06_adjusted_rgb_tray_ranking.png"
     save_tray_ranking_chart(
         tray_metrics,
-        chart_path,
+        path,
     )
-    charts["tray_ranking"] = chart_path
+    charts["tray_ranking"] = path
 
-    chart_path = CHARTS_ROOT / "08_day7_possible_bug_eaten_cells_by_tray.png"
+    path = CHARTS_ROOT / "07_day7_possible_bug_eaten_cells_by_tray.png"
     save_bug_imputed_cells_chart(
         tray_metrics,
-        chart_path,
+        path,
     )
-    charts["bug_cells"] = chart_path
+    charts["bug_cells"] = path
+
+    path = CHARTS_ROOT / "08_inside_outside_adjusted_green_cover_ideal_moisture.png"
+    save_inside_outside_green_chart(
+        inside_outside_comparison,
+        path,
+    )
+    charts["inside_outside_green"] = path
+
+    path = CHARTS_ROOT / "09_inside_outside_emergence_ideal_moisture.png"
+    save_inside_outside_emergence_chart(
+        inside_outside_comparison,
+        path,
+    )
+    charts["inside_outside_emergence"] = path
 
     return charts
 
 
 # ============================================================
-# 12) EXCEL + CSV OUTPUTS
+# 13) EXCEL AND CSV OUTPUTS
 # ============================================================
 
 def style_workbook(path: Path) -> None:
@@ -2041,6 +2120,7 @@ def save_tables(
     group_growth: pd.DataFrame,
     heat_phase: pd.DataFrame,
     moisture_phase: pd.DataFrame,
+    inside_outside_comparison: pd.DataFrame,
 ) -> dict[str, Path]:
     REPORTS_ROOT.mkdir(
         parents=True,
@@ -2055,64 +2135,37 @@ def save_tables(
         "group_growth": REPORTS_ROOT / "group_growth_metrics.csv",
         "heat_phase": REPORTS_ROOT / "heat_phase_response.csv",
         "moisture_phase": REPORTS_ROOT / "moisture_phase_response.csv",
+        "inside_outside": REPORTS_ROOT / "inside_outside_comparison_ideal_moisture.csv",
         "day7_imputed": REPORTS_ROOT / "possible_day7_bug_eaten_cells.csv",
         "excel": REPORTS_ROOT / "rgb_growth_treatment_report.xlsx",
     }
 
-    adjusted_cell.to_csv(
-        paths["adjusted_cell"],
-        index=False,
-    )
-
-    tray_daily.to_csv(
-        paths["tray_daily"],
-        index=False,
-    )
-
-    tray_metrics.to_csv(
-        paths["tray_metrics"],
-        index=False,
-    )
-
-    group_daily.to_csv(
-        paths["group_daily"],
-        index=False,
-    )
-
-    group_growth.to_csv(
-        paths["group_growth"],
-        index=False,
-    )
-
-    heat_phase.to_csv(
-        paths["heat_phase"],
-        index=False,
-    )
-
-    moisture_phase.to_csv(
-        paths["moisture_phase"],
-        index=False,
-    )
+    adjusted_cell.to_csv(paths["adjusted_cell"], index=False)
+    tray_daily.to_csv(paths["tray_daily"], index=False)
+    tray_metrics.to_csv(paths["tray_metrics"], index=False)
+    group_daily.to_csv(paths["group_daily"], index=False)
+    group_growth.to_csv(paths["group_growth"], index=False)
+    heat_phase.to_csv(paths["heat_phase"], index=False)
+    moisture_phase.to_csv(paths["moisture_phase"], index=False)
+    inside_outside_comparison.to_csv(paths["inside_outside"], index=False)
 
     day7_imputed = adjusted_cell.loc[
         adjusted_cell["day7_imputed"].eq("Yes")
     ].copy()
 
-    day7_imputed.to_csv(
-        paths["day7_imputed"],
-        index=False,
-    )
+    day7_imputed.to_csv(paths["day7_imputed"], index=False)
 
     readme = pd.DataFrame(
         {
             "Notes": [
                 "This workbook summarises Trial 3 RGB visible-emergence and green-cover growth metrics.",
                 "Observed Day 7 values come directly from Script 04 and are not overwritten.",
-                "Adjusted Day 7 values are only created for cells that were visible before Day 7 but missing on Day 7.",
+                "Adjusted Day 7 values are created only for cells that were visible before Day 7 but missing on Day 7.",
                 "day7_imputed = Yes identifies adjusted records.",
                 "Growth rates use real elapsed days since the Day 1 image, not folder number.",
                 "Day 7 is 8 elapsed days after Day 1 because images were skipped on 05/07/2026 and 06/07/2026.",
-                "This is descriptive image-derived analysis, not formal statistical proof.",
+                "The Inside vs Outside sheet compares only Ideal and Moisture trays because Heat trays had dynamic movement.",
+                "These are descriptive image-derived results, not formal statistical proof.",
                 "NDVI/NDRE are not included here; they are handled by later multispectral scripts.",
             ]
         }
@@ -2146,6 +2199,12 @@ def save_tables(
             index=False,
         )
 
+        safe_round_dataframe(inside_outside_comparison).to_excel(
+            writer,
+            sheet_name="Inside Outside Compare",
+            index=False,
+        )
+
         safe_round_dataframe(day7_imputed).to_excel(
             writer,
             sheet_name="Day7 Imputed Cells",
@@ -2176,7 +2235,772 @@ def save_tables(
 
 
 # ============================================================
-# 13) PDF REPORT
+# 14) WORD REPORT
+# ============================================================
+
+def add_docx_table(
+    document,
+    dataframe: pd.DataFrame,
+    columns: list[str],
+    max_rows: int = 12,
+):
+    frame = dataframe[columns].head(max_rows).copy()
+    frame = safe_round_dataframe(frame, 3)
+
+    table = document.add_table(
+        rows=1,
+        cols=len(columns),
+    )
+
+    table.style = "Table Grid"
+
+    header_cells = table.rows[0].cells
+
+    for index, column in enumerate(columns):
+        header_cells[index].text = column.replace("_", " ").title()
+
+    for _, row in frame.iterrows():
+        cells = table.add_row().cells
+
+        for index, column in enumerate(columns):
+            cells[index].text = str(row[column])
+
+
+def add_picture_if_exists(
+    document,
+    path: Path | None,
+    width_inches: float = 6.3,
+):
+    if path is None:
+        return
+
+    if not Path(path).exists():
+        return
+
+    document.add_picture(
+        str(path),
+        width=Inches(width_inches),
+    )
+
+
+def best_row_by_metric(
+    dataframe: pd.DataFrame,
+    metric: str,
+):
+    if dataframe.empty or metric not in dataframe.columns:
+        return None
+
+    frame = dataframe.dropna(
+        subset=[metric]
+    )
+
+    if frame.empty:
+        return None
+
+    return frame.loc[
+        frame[metric].idxmax()
+    ]
+
+
+def group_summary_sentence(
+    group_growth: pd.DataFrame,
+    group_type: str,
+    metric: str,
+    metric_label: str,
+) -> str:
+    subset = group_growth.loc[
+        group_growth["group_type"].eq(group_type)
+    ].copy()
+
+    if subset.empty or metric not in subset.columns:
+        return (
+            f"No valid {group_type.lower()} summary was available for "
+            f"{metric_label}."
+        )
+
+    subset = subset.dropna(
+        subset=[metric]
+    )
+
+    if subset.empty:
+        return (
+            f"No valid {group_type.lower()} summary was available for "
+            f"{metric_label}."
+        )
+
+    best = subset.loc[
+        subset[metric].idxmax()
+    ]
+
+    return (
+        f"For {metric_label}, the highest mean value in the {group_type.lower()} "
+        f"comparison was recorded by {best['group']} "
+        f"({format_number(best[metric])})."
+    )
+
+
+def describe_chart_file(
+    document,
+    chart_name: str,
+    chart_path: Path | None,
+    description: str,
+):
+    document.add_paragraph(
+        f"{chart_name}: {description}"
+    )
+
+    if chart_path is not None:
+        document.add_paragraph(
+            f"Chart file: {Path(chart_path).name}"
+        )
+
+
+def describe_output_file(
+    document,
+    filename: str,
+    description: str,
+):
+    paragraph = document.add_paragraph()
+    paragraph.add_run(filename).bold = True
+    paragraph.add_run(f": {description}")
+
+
+def create_word_report(
+    output_path: Path,
+    tray_metrics: pd.DataFrame,
+    group_growth: pd.DataFrame,
+    inside_outside_comparison: pd.DataFrame,
+    adjusted_cell: pd.DataFrame,
+    charts: dict[str, Path],
+):
+    if not DOCX_AVAILABLE:
+        print(
+            "WARNING: python-docx is not installed. Word report was skipped."
+        )
+        print(
+            "Install it with: pip install python-docx"
+        )
+        return None
+
+    output_path.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    document = Document()
+
+    styles = document.styles
+
+    styles["Normal"].font.name = "Times New Roman"
+    styles["Normal"].font.size = Pt(11)
+
+    for style_name in [
+        "Title",
+        "Heading 1",
+        "Heading 2",
+        "Heading 3",
+    ]:
+        if style_name in styles:
+            styles[style_name].font.name = "Times New Roman"
+
+    title = document.add_heading(
+        "Trial 3 RGB Growth-Rate and Treatment Comparison — Short Report",
+        level=0,
+    )
+
+    title.alignment = WD_ALIGN_PARAGRAPH.CENTER
+
+    document.add_paragraph(
+        "This report summarises the Trial 3 RGB visible-emergence and "
+        "green-cover analysis. The purpose of this script was to convert the "
+        "cell-level outputs from Script 04 into tray-level and treatment-level "
+        "growth comparisons. The report also documents the generated CSV, Excel, "
+        "chart, PDF, and Word outputs so that the results can be interpreted "
+        "and reused in the final internship report."
+    )
+
+    document.add_paragraph(
+        "The analysis is based on visible seedling evidence detected from RGB "
+        "images. Therefore, the results should be interpreted as visible "
+        "emergence and image-derived green-cover measurements, not as direct "
+        "biological germination measurements below the soil surface."
+    )
+
+    document.add_heading(
+        "1. Input data and processing summary",
+        level=1,
+    )
+
+    tray_count = int(tray_metrics["tray_no"].nunique()) if not tray_metrics.empty else 0
+    imputed_count = int(adjusted_cell["day7_imputed"].eq("Yes").sum()) if "day7_imputed" in adjusted_cell.columns else 0
+    cell_record_count = len(adjusted_cell)
+
+    document.add_paragraph(
+        f"The RGB comparison used {tray_count} trays, with each tray containing "
+        f"70 grid cells. The adjusted cell table contained {cell_record_count} "
+        f"cell-day records. The analysis covered the corrected seven observation "
+        f"days from Day 1 (29/06/2026) to Day 7 (07/07/2026)."
+    )
+
+    document.add_paragraph(
+        f"A total of {imputed_count} Day 7 cell records were flagged for adjusted "
+        f"estimation. These were cells where earlier visible green evidence was "
+        f"detected but Day 7 showed missing or no current green evidence. The "
+        f"adjustment was made only in the separate adjusted output columns; the "
+        f"observed Day 7 values were preserved unchanged."
+    )
+
+    document.add_paragraph(
+        "The main metrics calculated in this script were final tracked visible "
+        "emergence percentage, observed RGB green-cover percentage, adjusted RGB "
+        "green-cover percentage, Day 1 to Day 7 growth rates, Day 6 to Day 7 "
+        "change, possible Day 7 missing cells, and an overall descriptive RGB "
+        "performance score."
+    )
+
+    document.add_heading(
+        "2. Tray-level performance summary",
+        level=1,
+    )
+
+    best = best_row_by_metric(
+        tray_metrics,
+        "overall_adjusted_rgb_score",
+    )
+
+    if best is not None:
+        document.add_paragraph(
+            f"The highest adjusted RGB performance score was recorded by "
+            f"{best['tray']} ({best['microbe_status']} | {best['treatment']} | "
+            f"{best['environment_group']}). Its adjusted RGB score was "
+            f"{format_number(best['overall_adjusted_rgb_score'])}. This ranking "
+            f"combines final visible emergence, final adjusted RGB green-cover, "
+            f"growth-rate behaviour, and emergence timing into one descriptive "
+            f"score."
+        )
+
+    document.add_paragraph(
+        "The table below lists the tray-level ranking using the adjusted RGB "
+        "performance score. This table is useful for identifying the trays that "
+        "performed best overall after accounting for possible Day 7 missing crop "
+        "issues."
+    )
+
+    tray_columns = [
+        "tray",
+        "microbe_status",
+        "treatment",
+        "environment_group",
+        "final_tracked_emergence_percent",
+        "final_adjusted_green_cover_percent",
+        "day7_imputed_cells",
+        "overall_adjusted_rgb_score",
+        "overall_adjusted_rgb_rank",
+    ]
+
+    tray_columns = [
+        column
+        for column in tray_columns
+        if column in tray_metrics.columns
+    ]
+
+    add_docx_table(
+        document,
+        tray_metrics.sort_values(
+            "overall_adjusted_rgb_rank",
+            na_position="last",
+        ),
+        tray_columns,
+        max_rows=12,
+    )
+
+    add_picture_if_exists(
+        document,
+        charts.get("tray_ranking"),
+    )
+
+    document.add_heading(
+        "3. Microbes vs No Microbes comparison",
+        level=1,
+    )
+
+    document.add_paragraph(
+        group_summary_sentence(
+            group_growth,
+            "Microbe Status",
+            "mean_final_adjusted_green_cover_percent",
+            "final adjusted RGB green-cover",
+        )
+    )
+
+    document.add_paragraph(
+        group_summary_sentence(
+            group_growth,
+            "Microbe Status",
+            "mean_overall_adjusted_rgb_score",
+            "overall adjusted RGB performance score",
+        )
+    )
+
+    document.add_paragraph(
+        "This comparison groups trays by Microbes and No Microbes. It helps "
+        "evaluate whether the microbial treatment was associated with stronger "
+        "visible emergence or higher green-cover development across the trial."
+    )
+
+    microbe_group = group_growth.loc[
+        group_growth["group_type"].eq("Microbe Status")
+    ].copy()
+
+    if not microbe_group.empty:
+        microbe_columns = [
+            "group",
+            "tray_count",
+            "mean_final_tracked_emergence_percent",
+            "mean_final_adjusted_green_cover_percent",
+            "mean_adjusted_green_cover_rate_day1_to_day7_pp_per_day",
+            "mean_overall_adjusted_rgb_score",
+        ]
+
+        microbe_columns = [
+            column
+            for column in microbe_columns
+            if column in microbe_group.columns
+        ]
+
+        add_docx_table(
+            document,
+            microbe_group,
+            microbe_columns,
+            max_rows=5,
+        )
+
+    add_picture_if_exists(
+        document,
+        charts.get("microbes_green"),
+    )
+
+    document.add_paragraph(
+        "The Microbes vs No Microbes green-cover trend chart shows how the "
+        "mean adjusted RGB green-cover changed across the seven observation "
+        "days. This chart is useful for checking whether one group developed "
+        "faster or maintained stronger green-cover over time."
+    )
+
+    document.add_heading(
+        "4. Ideal vs Heat vs Moisture comparison",
+        level=1,
+    )
+
+    document.add_paragraph(
+        group_summary_sentence(
+            group_growth,
+            "Treatment Type",
+            "mean_final_adjusted_green_cover_percent",
+            "final adjusted RGB green-cover",
+        )
+    )
+
+    document.add_paragraph(
+        group_summary_sentence(
+            group_growth,
+            "Treatment Type",
+            "mean_overall_adjusted_rgb_score",
+            "overall adjusted RGB performance score",
+        )
+    )
+
+    document.add_paragraph(
+        "This comparison groups trays by treatment type: Ideal, Heat, and "
+        "Moisture. The Ideal treatment represents trays kept fully inside or "
+        "outside without the scheduled heat or moisture stress. Heat trays were "
+        "moved according to the heat-treatment schedule, while Moisture trays "
+        "followed the restricted watering schedule."
+    )
+
+    treatment_group = group_growth.loc[
+        group_growth["group_type"].eq("Treatment Type")
+    ].copy()
+
+    if not treatment_group.empty:
+        treatment_columns = [
+            "group",
+            "tray_count",
+            "mean_final_tracked_emergence_percent",
+            "mean_final_adjusted_green_cover_percent",
+            "mean_adjusted_green_cover_rate_day1_to_day7_pp_per_day",
+            "mean_overall_adjusted_rgb_score",
+        ]
+
+        treatment_columns = [
+            column
+            for column in treatment_columns
+            if column in treatment_group.columns
+        ]
+
+        add_docx_table(
+            document,
+            treatment_group,
+            treatment_columns,
+            max_rows=10,
+        )
+
+    add_picture_if_exists(
+        document,
+        charts.get("treatment_green"),
+    )
+
+    document.add_paragraph(
+        "The treatment green-cover chart compares Ideal, Heat, and Moisture "
+        "groups over time. It is useful for observing whether stress treatments "
+        "reduced growth, delayed emergence, or produced recovery patterns later "
+        "in the trial."
+    )
+
+    document.add_heading(
+        "5. Inside vs Outside comparison for Ideal and Moisture trays",
+        level=1,
+    )
+
+    document.add_paragraph(
+        "A direct Inside vs Outside comparison was performed only for Ideal and "
+        "Moisture trays because these treatments had fixed placement. Heat trays "
+        "were excluded from this direct comparison because their location changed "
+        "during the heat-treatment schedule. This prevents dynamic Heat trays "
+        "from being incorrectly treated as permanently inside or outside."
+    )
+
+    if not inside_outside_comparison.empty:
+        inside_columns = [
+            "treatment",
+            "inside_tray_count",
+            "outside_tray_count",
+            "inside_final_emergence_percent",
+            "outside_final_emergence_percent",
+            "inside_minus_outside_final_emergence_pp",
+            "inside_final_adjusted_green_cover_percent",
+            "outside_final_adjusted_green_cover_percent",
+            "inside_minus_outside_adjusted_green_cover_pp",
+            "inside_minus_outside_adjusted_growth_rate_pp_per_day",
+            "interpretation",
+        ]
+
+        inside_columns = [
+            column
+            for column in inside_columns
+            if column in inside_outside_comparison.columns
+        ]
+
+        add_docx_table(
+            document,
+            inside_outside_comparison,
+            inside_columns,
+            max_rows=5,
+        )
+
+        for _, row in inside_outside_comparison.iterrows():
+            document.add_paragraph(
+                f"For {row['treatment']} trays, the inside-minus-outside "
+                f"difference in adjusted Day 7 RGB green-cover was "
+                f"{format_number(row.get('inside_minus_outside_adjusted_green_cover_pp'))} "
+                f"percentage points. Interpretation: {row.get('interpretation', '')}"
+            )
+
+    add_picture_if_exists(
+        document,
+        charts.get("inside_outside_green"),
+    )
+
+    document.add_paragraph(
+        "The Inside vs Outside green-cover chart compares the adjusted final "
+        "green-cover percentage for Ideal and Moisture trays. This chart directly "
+        "answers whether fixed inside placement or fixed outside placement was "
+        "associated with stronger visible crop development within those treatment "
+        "types."
+    )
+
+    add_picture_if_exists(
+        document,
+        charts.get("inside_outside_emergence"),
+    )
+
+    document.add_paragraph(
+        "The Inside vs Outside emergence chart compares final tracked visible "
+        "emergence. It is different from the green-cover chart because emergence "
+        "measures how many cells showed visible seedlings, while green-cover "
+        "measures the relative amount of green plant area inside the cell zones."
+    )
+
+    document.add_heading(
+        "6. Observed vs adjusted Day 7 results",
+        level=1,
+    )
+
+    document.add_paragraph(
+        "The observed Day 7 results represent what was actually visible in the "
+        "final images. The adjusted Day 7 values are a separate scenario created "
+        "for growth-rate comparison when a cell had earlier visible crop but no "
+        "green evidence on Day 7. This adjustment is important because some "
+        "seedlings may have been eaten by bugs or otherwise disappeared before "
+        "the final image set."
+    )
+
+    document.add_paragraph(
+        "The observed and adjusted values are not mixed silently. The adjusted "
+        "cell table contains columns such as day7_imputed, imputation_reason, "
+        "imputation_method, previous_growth_rate_pp_per_day, and "
+        "adjustment_difference_pp so that every estimated value can be traced."
+    )
+
+    add_picture_if_exists(
+        document,
+        charts.get("day7_observed_adjusted"),
+    )
+
+    document.add_paragraph(
+        "The observed vs adjusted Day 7 chart shows how much the final tray-level "
+        "green-cover changed after applying the Day 7 missing-crop adjustment. "
+        "Large differences indicate trays where many cells had earlier growth but "
+        "lower visible green area in the final image."
+    )
+
+    add_picture_if_exists(
+        document,
+        charts.get("bug_cells"),
+    )
+
+    document.add_paragraph(
+        "The possible bug-eaten cell chart shows the number of Day 7 cells flagged "
+        "for adjustment in each tray. This chart helps identify which trays were "
+        "most affected by missing final-day crop evidence."
+    )
+
+    document.add_heading(
+        "7. Description of generated CSV files",
+        level=1,
+    )
+
+    describe_output_file(
+        document,
+        "cell_growth_with_day7_adjustment.csv",
+        "The full cell-level dataset after Day 7 adjustment processing. It preserves observed green-cover values and adds adjusted green-cover columns, imputation flags, and imputation reasons for cells affected by possible Day 7 crop disappearance.",
+    )
+
+    describe_output_file(
+        document,
+        "tray_daily_rgb_metrics.csv",
+        "A tray-by-day summary table. It contains daily visible emergence percentage, observed green-cover percentage, adjusted green-cover percentage, newly emerged cells, and Day 7 imputed cell counts for each tray.",
+    )
+
+    describe_output_file(
+        document,
+        "tray_growth_metrics.csv",
+        "A tray-level growth summary. It includes final emergence, final observed and adjusted green-cover, Day 1 to Day 7 growth rates, Day 6 to Day 7 changes, T50 timing, and overall RGB performance scores.",
+    )
+
+    describe_output_file(
+        document,
+        "group_daily_metrics.csv",
+        "A group-by-day trend table. It summarises daily group averages for Microbes vs No Microbes, treatment groups, treatment-by-environment groups, and other comparison categories.",
+    )
+
+    describe_output_file(
+        document,
+        "group_growth_metrics.csv",
+        "A group-level final comparison table. It summarises final performance and growth-rate metrics for each treatment or comparison group.",
+    )
+
+    describe_output_file(
+        document,
+        "inside_outside_comparison_ideal_moisture.csv",
+        "A dedicated comparison table for Ideal and Moisture trays only. It compares Inside vs Outside final emergence, adjusted green-cover, growth rate, and overall adjusted RGB score.",
+    )
+
+    describe_output_file(
+        document,
+        "possible_day7_bug_eaten_cells.csv",
+        "A filtered table containing only cells that were flagged for Day 7 adjustment because they had earlier visible green evidence but were missing or not visible on Day 7.",
+    )
+
+    describe_output_file(
+        document,
+        "heat_phase_response.csv",
+        "A descriptive summary of Heat tray performance across the heat-treatment phases, including inside-before-heat, outside heat exposure, and inside recovery.",
+    )
+
+    describe_output_file(
+        document,
+        "moisture_phase_response.csv",
+        "A descriptive summary of Moisture tray performance across watering and dry phases.",
+    )
+
+    document.add_heading(
+        "8. Description of Excel workbook",
+        level=1,
+    )
+
+    document.add_paragraph(
+        "The Excel workbook rgb_growth_treatment_report.xlsx combines the main "
+        "CSV outputs into one file with multiple sheets. It is the easiest file "
+        "to inspect manually because it contains tray-level, group-level, "
+        "inside-vs-outside, Day 7 adjustment, heat-phase, and moisture-phase "
+        "outputs in one place."
+    )
+
+    describe_output_file(
+        document,
+        "Tray Growth Metrics sheet",
+        "Contains one row per tray and is the main sheet for ranking trays by final performance, growth rate, and adjusted RGB score.",
+    )
+
+    describe_output_file(
+        document,
+        "Tray Daily Metrics sheet",
+        "Contains one row per tray per observation day and is useful for checking daily progression.",
+    )
+
+    describe_output_file(
+        document,
+        "Group Daily Metrics sheet",
+        "Contains group-level daily trends used to create line charts.",
+    )
+
+    describe_output_file(
+        document,
+        "Group Growth Metrics sheet",
+        "Contains final group-level comparison metrics for Microbes, treatments, and treatment-environment groups.",
+    )
+
+    describe_output_file(
+        document,
+        "Inside Outside Compare sheet",
+        "Contains the dedicated Ideal and Moisture Inside vs Outside comparison.",
+    )
+
+    describe_output_file(
+        document,
+        "Day7 Imputed Cells sheet",
+        "Contains only the cells where adjusted Day 7 values were estimated.",
+    )
+
+    describe_output_file(
+        document,
+        "Heat Phase Response sheet",
+        "Summarises performance of Heat trays across the heat-treatment movement phases.",
+    )
+
+    describe_output_file(
+        document,
+        "Moisture Phase Response sheet",
+        "Summarises performance of Moisture trays across watering and non-watering phases.",
+    )
+
+    document.add_heading(
+        "9. Description of generated charts",
+        level=1,
+    )
+
+    describe_chart_file(
+        document,
+        "01_microbes_visible_emergence_trend.png",
+        charts.get("microbes_emergence"),
+        "Shows the tracked visible emergence trend for Microbes and No Microbes groups across observation days.",
+    )
+
+    describe_chart_file(
+        document,
+        "02_microbes_adjusted_green_cover_trend.png",
+        charts.get("microbes_green"),
+        "Shows adjusted RGB green-cover over time for Microbes and No Microbes groups.",
+    )
+
+    describe_chart_file(
+        document,
+        "03_treatment_visible_emergence_trend.png",
+        charts.get("treatment_emergence"),
+        "Shows tracked visible emergence trends for Ideal, Heat, and Moisture treatments.",
+    )
+
+    describe_chart_file(
+        document,
+        "04_treatment_adjusted_green_cover_trend.png",
+        charts.get("treatment_green"),
+        "Shows adjusted RGB green-cover trends for Ideal, Heat, and Moisture treatments.",
+    )
+
+    describe_chart_file(
+        document,
+        "05_day7_observed_vs_adjusted_green_cover_by_tray.png",
+        charts.get("day7_observed_adjusted"),
+        "Compares observed Day 7 green-cover with adjusted Day 7 green-cover for each tray.",
+    )
+
+    describe_chart_file(
+        document,
+        "06_adjusted_rgb_tray_ranking.png",
+        charts.get("tray_ranking"),
+        "Ranks trays by overall adjusted RGB performance score.",
+    )
+
+    describe_chart_file(
+        document,
+        "07_day7_possible_bug_eaten_cells_by_tray.png",
+        charts.get("bug_cells"),
+        "Shows how many cells in each tray were flagged as possible Day 7 missing or bug-eaten cells.",
+    )
+
+    describe_chart_file(
+        document,
+        "08_inside_outside_adjusted_green_cover_ideal_moisture.png",
+        charts.get("inside_outside_green"),
+        "Compares Inside vs Outside adjusted Day 7 RGB green-cover for Ideal and Moisture trays.",
+    )
+
+    describe_chart_file(
+        document,
+        "09_inside_outside_emergence_ideal_moisture.png",
+        charts.get("inside_outside_emergence"),
+        "Compares Inside vs Outside final visible emergence for Ideal and Moisture trays.",
+    )
+
+    document.add_heading(
+        "10. Interpretation and limitations",
+        level=1,
+    )
+
+    document.add_paragraph(
+        "The results are useful for identifying visual growth trends and treatment "
+        "differences in Trial 3. However, they should be interpreted carefully. "
+        "The measurements are based on image-derived visible green area, not "
+        "direct plant biomass or calibrated reflectance. Lighting, image quality, "
+        "crop overlap, and cell visibility can affect RGB green-cover estimates."
+    )
+
+    document.add_paragraph(
+        "The Day 7 adjustment is a practical correction for likely bug-eaten or "
+        "missing seedlings. It should be used only for adjusted growth-rate "
+        "comparison, while the observed Day 7 results should remain the source "
+        "for reporting what was actually visible in the images."
+    )
+
+    document.add_paragraph(
+        "The Inside vs Outside comparison is restricted to Ideal and Moisture "
+        "trays because Heat trays were moved between environments. Including "
+        "Heat trays in a fixed Inside vs Outside comparison would be misleading."
+    )
+
+    document.add_paragraph(
+        "Because each treatment group contains a small number of trays, these "
+        "results should be treated as descriptive evidence rather than formal "
+        "statistical proof. The later multispectral scripts should be used to "
+        "check whether NDVI and NDRE trends support the RGB results."
+    )
+
+    document.save(output_path)
+
+    return output_path
+# ============================================================
+# 15) PDF REPORT
 # ============================================================
 
 def make_pdf_table(
@@ -2238,10 +3062,6 @@ def make_pdf_table(
                 ("GRID", (0, 0), (-1, -1), 0.25, colors.HexColor("#D1D5DB")),
                 ("VALIGN", (0, 0), (-1, -1), "TOP"),
                 ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, colors.HexColor("#F9FAFB")]),
-                ("LEFTPADDING", (0, 0), (-1, -1), 4),
-                ("RIGHTPADDING", (0, 0), (-1, -1), 4),
-                ("TOPPADDING", (0, 0), (-1, -1), 3),
-                ("BOTTOMPADDING", (0, 0), (-1, -1), 3),
             ]
         )
     )
@@ -2253,6 +3073,7 @@ def create_pdf_report(
     output_path: Path,
     tray_metrics: pd.DataFrame,
     group_growth: pd.DataFrame,
+    inside_outside_comparison: pd.DataFrame,
     charts: dict[str, Path],
 ):
     if not REPORTLAB_AVAILABLE:
@@ -2289,10 +3110,9 @@ def create_pdf_report(
 
     story.append(
         Paragraph(
-            "This report summarises visible-emergence and RGB green-cover "
-            "growth results from Trial 3. Observed Day 7 values are preserved, "
-            "and adjusted Day 7 values are provided separately for likely "
-            "bug-eaten or missing seedlings.",
+            "This report summarises Trial 3 visible-emergence and RGB green-cover "
+            "growth results. Observed Day 7 values are preserved, while adjusted "
+            "Day 7 values are reported separately for likely missing or bug-eaten seedlings.",
             styles["BodyText"],
         )
     )
@@ -2338,43 +3158,44 @@ def create_pdf_report(
 
     story.append(PageBreak())
 
-    group_columns = [
-        "group_type",
-        "group",
-        "tray_count",
-        "mean_final_tracked_emergence_percent",
-        "mean_final_observed_green_cover_percent",
-        "mean_final_adjusted_green_cover_percent",
-        "mean_day7_imputed_cells",
-        "mean_overall_adjusted_rgb_score",
-    ]
-
-    group_columns = [
-        column
-        for column in group_columns
-        if column in group_growth.columns
-    ]
-
     story.append(
         Paragraph(
-            "Group-level growth summary",
+            "Ideal and Moisture Inside vs Outside comparison",
             styles["Heading2"],
         )
     )
 
+    inside_columns = [
+        "treatment",
+        "inside_tray_count",
+        "outside_tray_count",
+        "inside_final_emergence_percent",
+        "outside_final_emergence_percent",
+        "inside_minus_outside_final_emergence_pp",
+        "inside_final_adjusted_green_cover_percent",
+        "outside_final_adjusted_green_cover_percent",
+        "inside_minus_outside_adjusted_green_cover_pp",
+        "interpretation",
+    ]
+
+    inside_columns = [
+        column
+        for column in inside_columns
+        if column in inside_outside_comparison.columns
+    ]
+
     story.append(
         make_pdf_table(
-            group_growth,
-            group_columns,
-            max_rows=30,
+            inside_outside_comparison,
+            inside_columns,
+            max_rows=5,
         )
     )
 
     figure_items = [
-        ("Microbes visible-emergence trend", charts.get("microbes_emergence")),
         ("Microbes adjusted green-cover trend", charts.get("microbes_green")),
-        ("Treatment visible-emergence trend", charts.get("treatment_emergence")),
         ("Treatment adjusted green-cover trend", charts.get("treatment_green")),
+        ("Inside vs Outside adjusted green-cover", charts.get("inside_outside_green")),
         ("Day 7 observed vs adjusted green-cover", charts.get("day7_observed_adjusted")),
         ("Adjusted RGB tray ranking", charts.get("tray_ranking")),
         ("Possible Day 7 bug-eaten cells", charts.get("bug_cells")),
@@ -2392,7 +3213,6 @@ def create_pdf_report(
             )
         )
         story.append(Spacer(1, 6))
-
         story.append(
             PDFImage(
                 str(path),
@@ -2407,7 +3227,7 @@ def create_pdf_report(
 
 
 # ============================================================
-# 14) SETTINGS
+# 16) SETTINGS
 # ============================================================
 
 def save_settings(
@@ -2427,6 +3247,10 @@ def save_settings(
         "expected_observation_days": EXPECTED_OBSERVATION_DAYS,
         "corrected_day1_photo_date": "2026-06-29",
         "day7_photo_date": "2026-07-07",
+        "inside_outside_comparison_policy": (
+            "Direct Inside vs Outside comparison is only performed for Ideal and Moisture trays. "
+            "Heat trays are excluded because their environment changed during the trial."
+        ),
         "observed_day7_policy": (
             "Observed Day 7 values from Script 04 are preserved exactly."
         ),
@@ -2436,8 +3260,8 @@ def save_settings(
             "the most recent prior green-cover value and previous positive "
             "growth slope."
         ),
-        "growth_rate_policy": (
-            "Growth rates use real elapsed days since Day 1 rather than folder number."
+        "word_report": (
+            "A short Word report is generated for this comparison script."
         ),
         "statistical_warning": (
             "This script produces descriptive image-derived comparisons only; "
@@ -2459,7 +3283,7 @@ def save_settings(
 
 
 # ============================================================
-# 15) MAIN
+# 17) MAIN
 # ============================================================
 
 def run_analysis(args) -> int:
@@ -2489,7 +3313,10 @@ def run_analysis(args) -> int:
     if missing_days:
         print(
             "\nWARNING: Missing expected observation days: "
-            + ", ".join(f"Day {day}" for day in sorted(missing_days))
+            + ", ".join(
+                f"Day {day}"
+                for day in sorted(missing_days)
+            )
         )
 
     adjusted_cell = create_adjusted_cell_table(
@@ -2511,12 +3338,17 @@ def run_analysis(args) -> int:
     )
 
     heat_phase, moisture_phase = create_phase_tables(
-        tray_daily,
+        tray_daily
+    )
+
+    inside_outside_comparison = create_inside_outside_comparison(
+        tray_metrics
     )
 
     charts = create_charts(
         group_daily,
         tray_metrics,
+        inside_outside_comparison,
     )
 
     table_paths = save_tables(
@@ -2527,6 +3359,7 @@ def run_analysis(args) -> int:
         group_growth,
         heat_phase,
         moisture_phase,
+        inside_outside_comparison,
     )
 
     pdf_path = REPORTS_ROOT / "rgb_growth_treatment_summary.pdf"
@@ -2535,6 +3368,18 @@ def run_analysis(args) -> int:
         pdf_path,
         tray_metrics,
         group_growth,
+        inside_outside_comparison,
+        charts,
+    )
+
+    docx_path = REPORTS_ROOT / "rgb_growth_treatment_short_report.docx"
+
+    create_word_report(
+        docx_path,
+        tray_metrics,
+        group_growth,
+        inside_outside_comparison,
+        adjusted_cell,
         charts,
     )
 
@@ -2565,11 +3410,12 @@ def run_analysis(args) -> int:
             f"\n  Adjusted RGB score: {best['overall_adjusted_rgb_score']:.2f}"
         )
 
-    print(f"\nAdjusted cell table:\n{table_paths['adjusted_cell']}")
+    print("\nMain output files:")
+    print(f"Adjusted cell table:\n{table_paths['adjusted_cell']}")
     print(f"\nTray daily metrics:\n{table_paths['tray_daily']}")
     print(f"\nTray growth metrics:\n{table_paths['tray_metrics']}")
-    print(f"\nGroup daily metrics:\n{table_paths['group_daily']}")
     print(f"\nGroup growth metrics:\n{table_paths['group_growth']}")
+    print(f"\nInside vs Outside comparison:\n{table_paths['inside_outside']}")
     print(f"\nDay 7 imputed cells:\n{table_paths['day7_imputed']}")
     print(f"\nExcel report:\n{table_paths['excel']}")
 
@@ -2577,6 +3423,11 @@ def run_analysis(args) -> int:
         print(f"\nPDF report:\n{pdf_path}")
     else:
         print("\nPDF report skipped because reportlab is not installed.")
+
+    if DOCX_AVAILABLE:
+        print(f"\nWord report:\n{docx_path}")
+    else:
+        print("\nWord report skipped because python-docx is not installed.")
 
     print(f"\nSettings:\n{settings_path}")
     print(f"\nCharts folder:\n{CHARTS_ROOT}")

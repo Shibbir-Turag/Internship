@@ -15,8 +15,9 @@
   ],
   "corrected_day1_photo_date": "2026-06-29",
   "day7_photo_date": "2026-07-07",
+  "inside_outside_comparison_policy": "Direct Inside vs Outside comparison is only performed for Ideal and Moisture trays. Heat trays are excluded because their environment changed during the trial.",
   "observed_day7_policy": "Observed Day 7 values from Script 04 are preserved exactly.",
   "adjusted_day7_policy": "If a cell had prior green evidence but no current green evidence on Day 7, an adjusted Day 7 green-cover value is estimated from the most recent prior green-cover value and previous positive growth slope.",
-  "growth_rate_policy": "Growth rates use real elapsed days since Day 1 rather than folder number.",
+  "word_report": "A short Word report is generated for this comparison script.",
   "statistical_warning": "This script produces descriptive image-derived comparisons only; it is not a formal statistical test."
 }

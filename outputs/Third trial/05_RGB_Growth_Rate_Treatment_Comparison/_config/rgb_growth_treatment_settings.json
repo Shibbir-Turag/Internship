@@ -1,0 +1,22 @@
+{
+  "purpose": "Trial 3 RGB growth-rate and treatment comparison",
+  "script04_tray_summary_csv": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\04_Visible_Emergence\\_reports\\visible_emergence_tray_summary.csv",
+  "script04_cell_results_csv": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\04_Visible_Emergence\\_reports\\visible_emergence_cell_results.csv",
+  "output_root": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\05_RGB_Growth_Rate_Treatment_Comparison",
+  "expected_cells_per_tray": 70,
+  "expected_observation_days": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "corrected_day1_photo_date": "2026-06-29",
+  "day7_photo_date": "2026-07-07",
+  "observed_day7_policy": "Observed Day 7 values from Script 04 are preserved exactly.",
+  "adjusted_day7_policy": "If a cell had prior green evidence but no current green evidence on Day 7, an adjusted Day 7 green-cover value is estimated from the most recent prior green-cover value and previous positive growth slope.",
+  "growth_rate_policy": "Growth rates use real elapsed days since Day 1 rather than folder number.",
+  "statistical_warning": "This script produces descriptive image-derived comparisons only; it is not a formal statistical test."
+}

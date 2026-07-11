@@ -1,0 +1,35 @@
+{
+  "purpose": "Third Trial independent multispectral 70-cell grid detection",
+  "crop_root": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\01_Crop_Dual_Reference",
+  "output_root": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\06_MS_Cell_Grid_Detection",
+  "rows": 7,
+  "columns": 10,
+  "expected_cells": 70,
+  "required_ms_bands": [
+    "G",
+    "R",
+    "RE",
+    "NIR"
+  ],
+  "reference_band": "NIR",
+  "zone_shrink": 0.9,
+  "primary_method": "regular darkness projection lattice on MS_NIR",
+  "secondary_method": "separately evaluated Hough-circle configurations; no cross-config merging",
+  "outer_coverage_checks": {
+    "max_first_column_x_ratio": 0.14,
+    "min_last_column_x_ratio": 0.86,
+    "max_first_row_y_ratio": 0.18,
+    "min_last_row_y_ratio": 0.82,
+    "min_horizontal_coverage_ratio": 0.76,
+    "min_vertical_coverage_ratio": 0.64
+  },
+  "accepted_statuses_for_script07": [
+    "PASS_AUTO",
+    "PASS_MANUAL"
+  ],
+  "profile_only": false,
+  "always_evaluate_hough": false,
+  "manual_fallback": false,
+  "manual_points_json": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\06_MS_Cell_Grid_Detection\\_config\\manual_ms_grid_points.json",
+  "word_report": "_reports/ms_independent_grid_work_process.docx"
+}

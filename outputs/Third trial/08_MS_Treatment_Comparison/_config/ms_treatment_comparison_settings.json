@@ -1,0 +1,40 @@
+{
+  "purpose": "Third Trial multispectral treatment and growth comparison",
+  "script07_cell_results": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\07_MS_Vegetation_Indices\\_reports\\ms_index_cell_results.csv",
+  "script07_tray_summary": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\07_MS_Vegetation_Indices\\_reports\\ms_index_tray_summary.csv",
+  "output_root": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\08_MS_Treatment_Comparison",
+  "expected_cells_per_tray": 70,
+  "expected_trays": 12,
+  "expected_tray_day_rows": 84,
+  "expected_cell_day_rows": 5880,
+  "date_map": {
+    "1": "2026-06-29",
+    "2": "2026-06-30",
+    "3": "2026-07-01",
+    "4": "2026-07-02",
+    "5": "2026-07-03",
+    "6": "2026-07-04",
+    "7": "2026-07-07"
+  },
+  "days_since_day1": {
+    "1": 0,
+    "2": 1,
+    "3": 2,
+    "4": 3,
+    "5": 4,
+    "6": 5,
+    "7": 8
+  },
+  "bug_flag_source": "Script 05 possible_day7_bug_eaten_cells.csv",
+  "day7_observed_policy": "Observed NDVI and NDRE values are preserved.",
+  "day7_adjusted_policy": "Only flagged possible bug-eaten cells receive separate adjusted Day 7 values.",
+  "imputation_method": "Linear projection from up to the latest three valid prior observations. If fewer than two valid observations exist, the latest valid value is carried forward.",
+  "maximum_index_slope_per_day": 0.2,
+  "index_bounds": [
+    -1.0,
+    1.0
+  ],
+  "inside_outside_policy": "Direct comparison is limited to Ideal and Moisture trays because Heat trays changed environment.",
+  "word_report": "_reports/ms_treatment_comparison_report.docx",
+  "interpretation_warning": "NDVI/NDRE are relative image-derived indices unless calibrated reflectance is available."
+}

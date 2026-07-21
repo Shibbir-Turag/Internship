@@ -1,0 +1,9 @@
+source,path,exists,used,notes
+RGB tray growth metrics,C:\Users\tshib\OneDrive\Desktop\Internship\outputs\Third trial\05_RGB_Growth_Rate_Treatment_Comparison\_reports\tray_growth_metrics.csv,True,Yes,Main RGB tray-level input.
+RGB group growth metrics,C:\Users\tshib\OneDrive\Desktop\Internship\outputs\Third trial\05_RGB_Growth_Rate_Treatment_Comparison\_reports\group_growth_metrics.csv,True,Reference only,Group metrics are recomputed in this synthesis for consistency.
+RGB Inside vs Outside comparison,C:\Users\tshib\OneDrive\Desktop\Internship\outputs\Third trial\05_RGB_Growth_Rate_Treatment_Comparison\_reports\inside_outside_comparison_ideal_moisture.csv,True,Reference only,Inside/Outside comparison is recomputed from tray-level data.
+RGB possible bug-eaten cells,C:\Users\tshib\OneDrive\Desktop\Internship\outputs\Third trial\05_RGB_Growth_Rate_Treatment_Comparison\_reports\possible_day7_bug_eaten_cells.csv,True,Indirect,Already incorporated into Script 05 RGB adjusted values.
+MS tray growth metrics,C:\Users\tshib\OneDrive\Desktop\Internship\outputs\Third trial\08_MS_Treatment_Comparison\_reports\ms_tray_growth_metrics.csv,True,Yes,Main MS tray-level input.
+MS group growth metrics,C:\Users\tshib\OneDrive\Desktop\Internship\outputs\Third trial\08_MS_Treatment_Comparison\_reports\ms_group_growth_metrics.csv,True,Reference only,Group metrics are recomputed in this synthesis for consistency.
+MS Inside vs Outside comparison,C:\Users\tshib\OneDrive\Desktop\Internship\outputs\Third trial\08_MS_Treatment_Comparison\_reports\inside_outside_comparison_ideal_moisture.csv,True,Reference only,Inside/Outside comparison is recomputed from tray-level data.
+MS possible bug-eaten adjusted cells,C:\Users\tshib\OneDrive\Desktop\Internship\outputs\Third trial\08_MS_Treatment_Comparison\_reports\possible_day7_bug_eaten_ms_cells.csv,True,Indirect,Already incorporated into Script 08 MS adjusted values.

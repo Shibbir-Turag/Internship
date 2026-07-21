@@ -1,0 +1,13 @@
+tray_no,tray,microbe_status,treatment,fixed_environment,environment_group,final_tracked_emergence_percent,final_adjusted_green_cover_percent,overall_adjusted_rgb_score
+1,Tray 1,No Microbes,Ideal,Inside,Inside,100.0,8.156387586235684,97.583857442348
+5,Tray 5,Microbes,Moisture,Inside,Inside,100.0,6.62066558180275,81.61290374860857
+8,Tray 8,Microbes,Heat,Dynamic Heat,Dynamic Heat,100.0,6.423137467934478,75.81211308259758
+6,Tray 6,Microbes,Heat,Dynamic Heat,Dynamic Heat,97.14285714285714,7.1600830071744195,73.37779278160693
+12,Tray 12,No Microbes,Moisture,Inside,Inside,98.57142857142858,6.421607794667051,66.78514340722367
+4,Tray 4,No Microbes,Heat,Dynamic Heat,Dynamic Heat,100.0,4.79059966167318,66.11756745991595
+11,Tray 11,No Microbes,Heat,Dynamic Heat,Dynamic Heat,98.57142857142858,3.9749684302992234,56.962386581588
+7,Tray 7,Microbes,Ideal,Outside,Outside,97.14285714285714,6.463895969164035,55.288770565362846
+9,Tray 9,Microbes,Ideal,Inside,Inside,95.71428571428572,4.045173134197009,35.11234516808647
+3,Tray 3,No Microbes,Moisture,Outside,Outside,95.71428571428572,3.6354248011797856,30.499540233588327
+2,Tray 2,No Microbes,Ideal,Outside,Outside,92.85714285714286,4.026672971167273,26.15286860869898
+10,Tray 10,Microbes,Moisture,Outside,Outside,95.71428571428572,3.0903016365391056,18.909090909090928

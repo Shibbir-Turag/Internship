@@ -1,0 +1,20 @@
+{
+  "purpose": "Third Trial final figure and report package",
+  "created_at": "2026-07-21T17:46:09",
+  "project_root": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship",
+  "third_output_root": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial",
+  "package_root": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\10_Final_Figure_Report_Package\\Third_Trial_Final_Package",
+  "zip_path": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\10_Final_Figure_Report_Package\\Third_Trial_Final_Figure_Report_Package.zip",
+  "source_scripts": {
+    "script04": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\04_Visible_Emergence",
+    "script05": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\05_RGB_Growth_Rate_Treatment_Comparison",
+    "script06": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\06_MS_Cell_Grid_Detection",
+    "script07": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\07_MS_Vegetation_Indices",
+    "script08": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\08_MS_Treatment_Comparison",
+    "script09": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\09_Final_RGB_MS_Synthesis"
+  },
+  "file_count": 114,
+  "total_size_kb": 105093.32,
+  "evidence_sample_limit_per_folder": 12,
+  "day7_policy": "Observed Day 7 and adjusted Day 7 outputs are copied as separate source files. This package does not mix or recalculate them."
+}

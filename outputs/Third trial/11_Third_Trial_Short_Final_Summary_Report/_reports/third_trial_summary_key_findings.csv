@@ -1,0 +1,8 @@
+topic,finding,value,source_table
+Top tray,Tray 8 had the highest final combined RGB + MS score.,81.34,final_combined_tray_synthesis.csv
+Microbes vs No Microbes,Microbes had the higher mean combined RGB + MS score.,62.53,final_group_synthesis.csv
+Treatment comparison,Heat had the highest mean combined RGB + MS score among the treatment types.,68.20,final_group_synthesis.csv
+Inside vs Outside — Ideal,Outside trays performed better on the combined RGB + MS score.,-3.99,final_inside_outside_synthesis.csv
+Inside vs Outside — Moisture,Inside trays performed better on the combined RGB + MS score.,27.16,final_inside_outside_synthesis.csv
+Day 7 adjusted scenario,"Observed Day 7 values were preserved, while likely bug-eaten cells were kept as a separate adjusted scenario.",396,final_combined_tray_synthesis.csv
+Output package,"The final package collected Word reports, Excel workbooks, CSV tables, charts and evidence files from Scripts 04–09.",114,third_trial_package_manifest.csv

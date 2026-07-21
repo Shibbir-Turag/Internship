@@ -1,0 +1,29 @@
+{
+  "ndvi_formula": "(MS_NIR - MS_R) / (MS_NIR + MS_R)",
+  "ndre_formula": "(MS_NIR - MS_RE) / (MS_NIR + MS_RE)",
+  "accepted_grid_statuses": [
+    "PASS_AUTO",
+    "PASS_MANUAL"
+  ],
+  "minimum_valid_pixels_per_cell": 20,
+  "date_map": {
+    "1": "2026-06-29",
+    "2": "2026-06-30",
+    "3": "2026-07-01",
+    "4": "2026-07-02",
+    "5": "2026-07-03",
+    "6": "2026-07-04",
+    "7": "2026-07-07"
+  },
+  "days_since_day1": {
+    "1": 0,
+    "2": 1,
+    "3": 2,
+    "4": 3,
+    "5": 4,
+    "6": 5,
+    "7": 8
+  },
+  "day7_policy": "Observed only; no imputation in Script 07.",
+  "interpretation": "Relative image-derived indices unless calibrated reflectance is available."
+}

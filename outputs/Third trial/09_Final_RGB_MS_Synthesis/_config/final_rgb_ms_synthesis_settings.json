@@ -1,0 +1,26 @@
+{
+  "purpose": "Third Trial final RGB + MS synthesis",
+  "rgb_reports_root": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\05_RGB_Growth_Rate_Treatment_Comparison\\_reports",
+  "ms_reports_root": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\08_MS_Treatment_Comparison\\_reports",
+  "rgb_tray_growth_file": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\05_RGB_Growth_Rate_Treatment_Comparison\\_reports\\tray_growth_metrics.csv",
+  "ms_tray_growth_file": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\08_MS_Treatment_Comparison\\_reports\\ms_tray_growth_metrics.csv",
+  "output_root": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\09_Final_RGB_MS_Synthesis",
+  "expected_trays": 12,
+  "expected_tray_day_rows": 84,
+  "expected_cell_day_rows": 5880,
+  "date_map": {
+    "1": "2026-06-29",
+    "2": "2026-06-30",
+    "3": "2026-07-01",
+    "4": "2026-07-02",
+    "5": "2026-07-03",
+    "6": "2026-07-04",
+    "7": "2026-07-07"
+  },
+  "combined_score_method": "Mean of normalised RGB score and normalised MS score.",
+  "rgb_evidence": "Visible emergence and green-cover based indicators.",
+  "ms_evidence": "Relative image-derived NDVI and NDRE indicators.",
+  "day7_policy": "Observed Day 7 and adjusted Day 7 values remain separate.",
+  "inside_outside_policy": "Only Ideal and Moisture treatments are used for fixed Inside/Outside comparison.",
+  "interpretation_warning": "Combined score is descriptive, not a formal statistical test."
+}

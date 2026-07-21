@@ -1,0 +1,30 @@
+{
+  "purpose": "Third Trial visible emergence and RGB green-cover analysis",
+  "crop_root": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\01_Crop_Dual_Reference",
+  "grid_root": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\03_Cell_Grid_Detection",
+  "tray_status_xlsx": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\data\\Third Trial\\Trial_3_Tray_Status.xlsx",
+  "output_root": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\04_Visible_Emergence",
+  "rows": 7,
+  "columns": 10,
+  "expected_cells": 70,
+  "accepted_grid_statuses": [
+    "PASS_AUTO",
+    "PASS_MANUAL"
+  ],
+  "accept_check_auto": false,
+  "corrected_day1_photo_date": "2026-06-29",
+  "day7_photo_date": "2026-07-07",
+  "green_hue_min": 20,
+  "green_hue_max": 95,
+  "green_saturation_min": 28,
+  "green_value_min": 35,
+  "excess_green_min": 12,
+  "green_to_red_ratio": 1.03,
+  "green_to_blue_ratio": 1.0,
+  "min_green_pixels_per_cell": 20,
+  "min_green_component_pixels": 12,
+  "morph_kernel_size": 3,
+  "tray_design_note": "Tray design loaded from workbook: 12 tray rows.",
+  "schedule_note": "Observation schedule loaded from workbook: 8 day rows.",
+  "day7_bug_rule": "Observed Day 7 values are preserved. Cells that had earlier emergence but no raw green evidence on Day 7 are flagged as possible bug-eaten/missing. Adjusted Day 7 growth estimates must be created later in Script 05."
+}

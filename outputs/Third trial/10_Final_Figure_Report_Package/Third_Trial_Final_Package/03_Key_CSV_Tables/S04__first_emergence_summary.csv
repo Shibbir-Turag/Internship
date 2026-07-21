@@ -1,0 +1,841 @@
+tray_no,tray,cell_id,row,column,label_code,microbe_status,treatment,label_environment,environment_type,watering_rule,ever_visible_emerged,first_visible_emergence_day,first_visible_emergence_day_order,first_visible_emergence_date,possible_day7_bug_eaten,notes
+1,Tray 1,1,1,1,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,2,1,2,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,3,1,3,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,4,1,4,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,5,1,5,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,6,1,6,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,7,1,7,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,8,1,8,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,9,1,9,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,10,1,10,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,11,2,1,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,12,2,2,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,13,2,3,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,14,2,4,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,15,2,5,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,16,2,6,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,17,2,7,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+1,Tray 1,18,2,8,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,19,2,9,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+1,Tray 1,20,2,10,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,21,3,1,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,22,3,2,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,23,3,3,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,24,3,4,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,25,3,5,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+1,Tray 1,26,3,6,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,27,3,7,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,28,3,8,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,29,3,9,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,30,3,10,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,31,4,1,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+1,Tray 1,32,4,2,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,33,4,3,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,34,4,4,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,35,4,5,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,36,4,6,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,37,4,7,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,38,4,8,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,39,4,9,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,40,4,10,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,41,5,1,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,42,5,2,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,43,5,3,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,44,5,4,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,45,5,5,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,46,5,6,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,47,5,7,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,48,5,8,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,49,5,9,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,50,5,10,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,51,6,1,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,52,6,2,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+1,Tray 1,53,6,3,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+1,Tray 1,54,6,4,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,55,6,5,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+1,Tray 1,56,6,6,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,57,6,7,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,58,6,8,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,59,6,9,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,60,6,10,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,61,7,1,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,62,7,2,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,63,7,3,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,64,7,4,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,65,7,5,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+1,Tray 1,66,7,6,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,67,7,7,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+1,Tray 1,68,7,8,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+1,Tray 1,69,7,9,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+1,Tray 1,70,7,10,N/M,No Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+2,Tray 2,1,1,1,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,2,1,2,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,3,1,3,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 4,4,2026-07-02,No,
+2,Tray 2,4,1,4,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,5,1,5,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,6,1,6,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,7,1,7,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,8,1,8,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,9,1,9,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,10,1,10,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,11,2,1,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,12,2,2,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,13,2,3,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,No,,,,No,
+2,Tray 2,14,2,4,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,15,2,5,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,16,2,6,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,17,2,7,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,18,2,8,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,19,2,9,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,20,2,10,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 7,7,2026-07-07,No,
+2,Tray 2,21,3,1,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,22,3,2,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,23,3,3,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,No,,,,No,
+2,Tray 2,24,3,4,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,25,3,5,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,26,3,6,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,27,3,7,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,28,3,8,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,29,3,9,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,30,3,10,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,31,4,1,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,32,4,2,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,33,4,3,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,No,,,,No,
+2,Tray 2,34,4,4,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 4,4,2026-07-02,No,
+2,Tray 2,35,4,5,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,36,4,6,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,37,4,7,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,38,4,8,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,39,4,9,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,40,4,10,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,41,5,1,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,42,5,2,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,43,5,3,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,44,5,4,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,45,5,5,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,46,5,6,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,47,5,7,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,48,5,8,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,49,5,9,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,50,5,10,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,51,6,1,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,52,6,2,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,53,6,3,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,54,6,4,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,55,6,5,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,56,6,6,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,57,6,7,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,58,6,8,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,59,6,9,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,60,6,10,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,No,,,,No,
+2,Tray 2,61,7,1,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,62,7,2,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,63,7,3,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,No,,,,No,
+2,Tray 2,64,7,4,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,65,7,5,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,66,7,6,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+2,Tray 2,67,7,7,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 6,6,2026-07-04,No,
+2,Tray 2,68,7,8,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,69,7,9,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+2,Tray 2,70,7,10,N/M,No Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+3,Tray 3,1,1,1,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,2,1,2,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,3,1,3,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,4,1,4,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,5,1,5,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+3,Tray 3,6,1,6,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+3,Tray 3,7,1,7,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,8,1,8,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+3,Tray 3,9,1,9,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,10,1,10,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,11,2,1,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+3,Tray 3,12,2,2,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,13,2,3,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,14,2,4,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,15,2,5,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,16,2,6,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,17,2,7,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,18,2,8,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,19,2,9,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+3,Tray 3,20,2,10,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+3,Tray 3,21,3,1,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,22,3,2,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+3,Tray 3,23,3,3,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 4,4,2026-07-02,No,
+3,Tray 3,24,3,4,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 4,4,2026-07-02,No,
+3,Tray 3,25,3,5,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,26,3,6,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+3,Tray 3,27,3,7,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,28,3,8,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+3,Tray 3,29,3,9,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,30,3,10,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+3,Tray 3,31,4,1,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+3,Tray 3,32,4,2,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,33,4,3,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,34,4,4,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,35,4,5,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 4,4,2026-07-02,No,
+3,Tray 3,36,4,6,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 5,5,2026-07-03,No,
+3,Tray 3,37,4,7,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+3,Tray 3,38,4,8,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,39,4,9,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,40,4,10,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+3,Tray 3,41,5,1,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,42,5,2,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,43,5,3,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,No,,,,No,
+3,Tray 3,44,5,4,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+3,Tray 3,45,5,5,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 4,4,2026-07-02,No,
+3,Tray 3,46,5,6,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,47,5,7,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+3,Tray 3,48,5,8,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,49,5,9,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,50,5,10,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,51,6,1,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,No,,,,No,
+3,Tray 3,52,6,2,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+3,Tray 3,53,6,3,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,54,6,4,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,55,6,5,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,56,6,6,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,57,6,7,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+3,Tray 3,58,6,8,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,No,,,,No,
+3,Tray 3,59,6,9,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,60,6,10,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+3,Tray 3,61,7,1,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,62,7,2,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 6,6,2026-07-04,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+3,Tray 3,63,7,3,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,64,7,4,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 1,1,2026-06-29,No,
+3,Tray 3,65,7,5,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,66,7,6,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+3,Tray 3,67,7,7,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+3,Tray 3,68,7,8,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+3,Tray 3,69,7,9,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+3,Tray 3,70,7,10,N/M,No Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+4,Tray 4,1,1,1,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,2,1,2,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,3,1,3,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,4,1,4,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,5,1,5,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 1,1,2026-06-29,No,
+4,Tray 4,6,1,6,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,7,1,7,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,8,1,8,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 1,1,2026-06-29,No,
+4,Tray 4,9,1,9,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,10,1,10,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,11,2,1,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,12,2,2,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,13,2,3,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,14,2,4,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+4,Tray 4,15,2,5,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,16,2,6,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 1,1,2026-06-29,No,
+4,Tray 4,17,2,7,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,18,2,8,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,19,2,9,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+4,Tray 4,20,2,10,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,21,3,1,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,22,3,2,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,23,3,3,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,24,3,4,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,25,3,5,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 1,1,2026-06-29,No,
+4,Tray 4,26,3,6,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,27,3,7,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,28,3,8,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,29,3,9,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,30,3,10,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+4,Tray 4,31,4,1,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+4,Tray 4,32,4,2,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+4,Tray 4,33,4,3,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,34,4,4,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,35,4,5,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,36,4,6,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,37,4,7,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,38,4,8,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,39,4,9,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,40,4,10,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,41,5,1,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,42,5,2,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+4,Tray 4,43,5,3,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,44,5,4,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+4,Tray 4,45,5,5,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,46,5,6,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,47,5,7,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,48,5,8,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,49,5,9,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+4,Tray 4,50,5,10,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,51,6,1,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+4,Tray 4,52,6,2,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+4,Tray 4,53,6,3,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,54,6,4,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+4,Tray 4,55,6,5,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+4,Tray 4,56,6,6,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,57,6,7,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+4,Tray 4,58,6,8,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+4,Tray 4,59,6,9,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+4,Tray 4,60,6,10,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,61,7,1,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+4,Tray 4,62,7,2,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+4,Tray 4,63,7,3,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,64,7,4,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+4,Tray 4,65,7,5,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+4,Tray 4,66,7,6,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+4,Tray 4,67,7,7,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+4,Tray 4,68,7,8,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,69,7,9,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+4,Tray 4,70,7,10,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+5,Tray 5,1,1,1,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,2,1,2,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+5,Tray 5,3,1,3,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+5,Tray 5,4,1,4,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,5,1,5,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+5,Tray 5,6,1,6,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,7,1,7,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+5,Tray 5,8,1,8,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,9,1,9,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,10,1,10,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,11,2,1,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+5,Tray 5,12,2,2,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,13,2,3,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,14,2,4,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+5,Tray 5,15,2,5,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,16,2,6,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+5,Tray 5,17,2,7,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,18,2,8,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+5,Tray 5,19,2,9,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+5,Tray 5,20,2,10,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+5,Tray 5,21,3,1,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,22,3,2,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,23,3,3,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,24,3,4,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,25,3,5,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,26,3,6,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,27,3,7,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,28,3,8,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,29,3,9,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+5,Tray 5,30,3,10,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,31,4,1,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,32,4,2,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+5,Tray 5,33,4,3,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,34,4,4,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,35,4,5,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,36,4,6,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,37,4,7,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,38,4,8,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 1,1,2026-06-29,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,39,4,9,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,40,4,10,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,41,5,1,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+5,Tray 5,42,5,2,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+5,Tray 5,43,5,3,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,44,5,4,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+5,Tray 5,45,5,5,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 1,1,2026-06-29,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,46,5,6,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,47,5,7,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,48,5,8,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,49,5,9,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,50,5,10,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,51,6,1,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+5,Tray 5,52,6,2,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+5,Tray 5,53,6,3,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+5,Tray 5,54,6,4,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,55,6,5,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+5,Tray 5,56,6,6,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,57,6,7,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,58,6,8,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,59,6,9,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+5,Tray 5,60,6,10,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,61,7,1,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+5,Tray 5,62,7,2,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,63,7,3,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,64,7,4,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+5,Tray 5,65,7,5,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,66,7,6,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,67,7,7,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+5,Tray 5,68,7,8,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+5,Tray 5,69,7,9,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+5,Tray 5,70,7,10,M,Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,1,1,1,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,2,1,2,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,3,1,3,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,4,1,4,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,5,1,5,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,6,1,6,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,7,1,7,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,8,1,8,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+6,Tray 6,9,1,9,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,10,1,10,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+6,Tray 6,11,2,1,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,12,2,2,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,13,2,3,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,14,2,4,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,15,2,5,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,16,2,6,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,17,2,7,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,18,2,8,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+6,Tray 6,19,2,9,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,20,2,10,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+6,Tray 6,21,3,1,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,22,3,2,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+6,Tray 6,23,3,3,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,24,3,4,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,25,3,5,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,26,3,6,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,27,3,7,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 1,1,2026-06-29,No,
+6,Tray 6,28,3,8,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,29,3,9,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,30,3,10,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,31,4,1,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+6,Tray 6,32,4,2,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,33,4,3,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,34,4,4,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,35,4,5,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 1,1,2026-06-29,No,
+6,Tray 6,36,4,6,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+6,Tray 6,37,4,7,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,38,4,8,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 6,6,2026-07-04,No,
+6,Tray 6,39,4,9,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,40,4,10,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,41,5,1,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,42,5,2,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,43,5,3,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,44,5,4,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,45,5,5,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,46,5,6,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,No,,,,No,
+6,Tray 6,47,5,7,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+6,Tray 6,48,5,8,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,49,5,9,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,50,5,10,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,51,6,1,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,52,6,2,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,53,6,3,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,54,6,4,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,55,6,5,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,No,,,,No,
+6,Tray 6,56,6,6,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,57,6,7,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 4,4,2026-07-02,No,
+6,Tray 6,58,6,8,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+6,Tray 6,59,6,9,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,60,6,10,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,61,7,1,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 4,4,2026-07-02,No,
+6,Tray 6,62,7,2,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,63,7,3,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,64,7,4,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,65,7,5,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,66,7,6,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,67,7,7,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,68,7,8,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+6,Tray 6,69,7,9,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 1,1,2026-06-29,No,
+6,Tray 6,70,7,10,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+7,Tray 7,1,1,1,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+7,Tray 7,2,1,2,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,3,1,3,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,4,1,4,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,5,1,5,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,6,1,6,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,7,1,7,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+7,Tray 7,8,1,8,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,9,1,9,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+7,Tray 7,10,1,10,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+7,Tray 7,11,2,1,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+7,Tray 7,12,2,2,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,13,2,3,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,14,2,4,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,15,2,5,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 4,4,2026-07-02,No,
+7,Tray 7,16,2,6,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+7,Tray 7,17,2,7,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,18,2,8,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,19,2,9,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+7,Tray 7,20,2,10,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,21,3,1,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+7,Tray 7,22,3,2,M,Microbes,Ideal,Outside,Fixed,Daily watering,No,,,,No,
+7,Tray 7,23,3,3,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 4,4,2026-07-02,No,
+7,Tray 7,24,3,4,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+7,Tray 7,25,3,5,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,26,3,6,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+7,Tray 7,27,3,7,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+7,Tray 7,28,3,8,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,29,3,9,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,30,3,10,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+7,Tray 7,31,4,1,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,32,4,2,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,33,4,3,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,34,4,4,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+7,Tray 7,35,4,5,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,36,4,6,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,37,4,7,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+7,Tray 7,38,4,8,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,39,4,9,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,40,4,10,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 6,6,2026-07-04,No,
+7,Tray 7,41,5,1,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+7,Tray 7,42,5,2,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,43,5,3,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 4,4,2026-07-02,No,
+7,Tray 7,44,5,4,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,45,5,5,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+7,Tray 7,46,5,6,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 4,4,2026-07-02,No,
+7,Tray 7,47,5,7,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,48,5,8,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,49,5,9,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,50,5,10,M,Microbes,Ideal,Outside,Fixed,Daily watering,No,,,,No,
+7,Tray 7,51,6,1,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,52,6,2,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,53,6,3,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,54,6,4,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+7,Tray 7,55,6,5,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 1,1,2026-06-29,No,
+7,Tray 7,56,6,6,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+7,Tray 7,57,6,7,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,58,6,8,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 4,4,2026-07-02,No,
+7,Tray 7,59,6,9,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,60,6,10,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,61,7,1,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+7,Tray 7,62,7,2,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,63,7,3,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,64,7,4,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 5,5,2026-07-03,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+7,Tray 7,65,7,5,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,66,7,6,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 1,1,2026-06-29,No,
+7,Tray 7,67,7,7,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+7,Tray 7,68,7,8,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 1,1,2026-06-29,No,
+7,Tray 7,69,7,9,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+7,Tray 7,70,7,10,M,Microbes,Ideal,Outside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+8,Tray 8,1,1,1,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+8,Tray 8,2,1,2,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,3,1,3,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,4,1,4,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,5,1,5,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,6,1,6,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+8,Tray 8,7,1,7,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+8,Tray 8,8,1,8,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,9,1,9,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+8,Tray 8,10,1,10,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+8,Tray 8,11,2,1,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,12,2,2,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,13,2,3,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,14,2,4,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,15,2,5,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,16,2,6,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+8,Tray 8,17,2,7,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,18,2,8,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,19,2,9,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+8,Tray 8,20,2,10,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,21,3,1,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+8,Tray 8,22,3,2,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,23,3,3,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+8,Tray 8,24,3,4,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+8,Tray 8,25,3,5,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,26,3,6,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,27,3,7,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,28,3,8,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,29,3,9,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 1,1,2026-06-29,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+8,Tray 8,30,3,10,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+8,Tray 8,31,4,1,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,32,4,2,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,33,4,3,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+8,Tray 8,34,4,4,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,35,4,5,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,36,4,6,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+8,Tray 8,37,4,7,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,38,4,8,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,39,4,9,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,40,4,10,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+8,Tray 8,41,5,1,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 6,6,2026-07-04,No,
+8,Tray 8,42,5,2,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+8,Tray 8,43,5,3,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+8,Tray 8,44,5,4,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+8,Tray 8,45,5,5,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,46,5,6,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+8,Tray 8,47,5,7,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,48,5,8,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,49,5,9,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 4,4,2026-07-02,No,
+8,Tray 8,50,5,10,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+8,Tray 8,51,6,1,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+8,Tray 8,52,6,2,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,53,6,3,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,54,6,4,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+8,Tray 8,55,6,5,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+8,Tray 8,56,6,6,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,57,6,7,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+8,Tray 8,58,6,8,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+8,Tray 8,59,6,9,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 1,1,2026-06-29,No,
+8,Tray 8,60,6,10,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 4,4,2026-07-02,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+8,Tray 8,61,7,1,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,62,7,2,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,63,7,3,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 1,1,2026-06-29,No,
+8,Tray 8,64,7,4,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+8,Tray 8,65,7,5,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,66,7,6,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,67,7,7,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 4,4,2026-07-02,No,
+8,Tray 8,68,7,8,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+8,Tray 8,69,7,9,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+8,Tray 8,70,7,10,M,Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,1,1,1,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,2,1,2,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+9,Tray 9,3,1,3,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+9,Tray 9,4,1,4,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,5,1,5,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,6,1,6,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 1,1,2026-06-29,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,7,1,7,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,8,1,8,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+9,Tray 9,9,1,9,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+9,Tray 9,10,1,10,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 1,1,2026-06-29,No,
+9,Tray 9,11,2,1,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+9,Tray 9,12,2,2,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,13,2,3,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,14,2,4,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,15,2,5,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,16,2,6,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+9,Tray 9,17,2,7,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,18,2,8,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,19,2,9,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,20,2,10,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+9,Tray 9,21,3,1,M,Microbes,Ideal,Inside,Fixed,Daily watering,No,,,,No,
+9,Tray 9,22,3,2,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 4,4,2026-07-02,No,
+9,Tray 9,23,3,3,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+9,Tray 9,24,3,4,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,25,3,5,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,26,3,6,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+9,Tray 9,27,3,7,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+9,Tray 9,28,3,8,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 1,1,2026-06-29,No,
+9,Tray 9,29,3,9,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,30,3,10,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,31,4,1,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,32,4,2,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 1,1,2026-06-29,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,33,4,3,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,34,4,4,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,35,4,5,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+9,Tray 9,36,4,6,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,37,4,7,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+9,Tray 9,38,4,8,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,No,
+9,Tray 9,39,4,9,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,40,4,10,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 1,1,2026-06-29,No,
+9,Tray 9,41,5,1,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,42,5,2,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,43,5,3,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,44,5,4,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,45,5,5,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+9,Tray 9,46,5,6,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 1,1,2026-06-29,No,
+9,Tray 9,47,5,7,M,Microbes,Ideal,Inside,Fixed,Daily watering,No,,,,No,
+9,Tray 9,48,5,8,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 1,1,2026-06-29,No,
+9,Tray 9,49,5,9,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+9,Tray 9,50,5,10,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,51,6,1,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+9,Tray 9,52,6,2,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+9,Tray 9,53,6,3,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,54,6,4,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,55,6,5,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,56,6,6,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,57,6,7,M,Microbes,Ideal,Inside,Fixed,Daily watering,No,,,,No,
+9,Tray 9,58,6,8,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 1,1,2026-06-29,No,
+9,Tray 9,59,6,9,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+9,Tray 9,60,6,10,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,61,7,1,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+9,Tray 9,62,7,2,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+9,Tray 9,63,7,3,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,64,7,4,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+9,Tray 9,65,7,5,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,66,7,6,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+9,Tray 9,67,7,7,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+9,Tray 9,68,7,8,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,No,
+9,Tray 9,69,7,9,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+9,Tray 9,70,7,10,M,Microbes,Ideal,Inside,Fixed,Daily watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+10,Tray 10,1,1,1,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,2,1,2,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+10,Tray 10,3,1,3,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,4,1,4,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,5,1,5,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,6,1,6,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,7,1,7,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 1,1,2026-06-29,No,
+10,Tray 10,8,1,8,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 6,6,2026-07-04,No,
+10,Tray 10,9,1,9,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+10,Tray 10,10,1,10,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 5,5,2026-07-03,No,
+10,Tray 10,11,2,1,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,No,,,,No,
+10,Tray 10,12,2,2,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 4,4,2026-07-02,No,
+10,Tray 10,13,2,3,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,14,2,4,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,15,2,5,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,16,2,6,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 4,4,2026-07-02,No,
+10,Tray 10,17,2,7,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,18,2,8,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+10,Tray 10,19,2,9,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 4,4,2026-07-02,No,
+10,Tray 10,20,2,10,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 5,5,2026-07-03,No,
+10,Tray 10,21,3,1,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,22,3,2,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,23,3,3,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,24,3,4,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,25,3,5,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 1,1,2026-06-29,No,
+10,Tray 10,26,3,6,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,27,3,7,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 4,4,2026-07-02,No,
+10,Tray 10,28,3,8,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,No,,,,No,
+10,Tray 10,29,3,9,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,30,3,10,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,31,4,1,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 4,4,2026-07-02,No,
+10,Tray 10,32,4,2,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 4,4,2026-07-02,No,
+10,Tray 10,33,4,3,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 4,4,2026-07-02,No,
+10,Tray 10,34,4,4,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+10,Tray 10,35,4,5,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+10,Tray 10,36,4,6,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,No,,,,No,
+10,Tray 10,37,4,7,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,38,4,8,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 5,5,2026-07-03,No,
+10,Tray 10,39,4,9,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,40,4,10,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,41,5,1,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,42,5,2,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,43,5,3,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,44,5,4,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,45,5,5,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,46,5,6,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,47,5,7,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 5,5,2026-07-03,No,
+10,Tray 10,48,5,8,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 4,4,2026-07-02,No,
+10,Tray 10,49,5,9,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+10,Tray 10,50,5,10,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,51,6,1,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,52,6,2,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 4,4,2026-07-02,No,
+10,Tray 10,53,6,3,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,54,6,4,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,55,6,5,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,56,6,6,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+10,Tray 10,57,6,7,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,58,6,8,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 4,4,2026-07-02,No,
+10,Tray 10,59,6,9,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 5,5,2026-07-03,No,
+10,Tray 10,60,6,10,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,61,7,1,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,62,7,2,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 4,4,2026-07-02,No,
+10,Tray 10,63,7,3,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,64,7,4,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 5,5,2026-07-03,No,
+10,Tray 10,65,7,5,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 4,4,2026-07-02,No,
+10,Tray 10,66,7,6,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,67,7,7,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,68,7,8,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,69,7,9,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+10,Tray 10,70,7,10,M,Microbes,Moisture,Outside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+11,Tray 11,1,1,1,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,2,1,2,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,3,1,3,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+11,Tray 11,4,1,4,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+11,Tray 11,5,1,5,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,6,1,6,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,7,1,7,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 1,1,2026-06-29,No,
+11,Tray 11,8,1,8,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,9,1,9,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+11,Tray 11,10,1,10,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+11,Tray 11,11,2,1,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,12,2,2,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+11,Tray 11,13,2,3,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,14,2,4,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+11,Tray 11,15,2,5,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+11,Tray 11,16,2,6,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,17,2,7,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+11,Tray 11,18,2,8,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,No,,,,No,
+11,Tray 11,19,2,9,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+11,Tray 11,20,2,10,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 1,1,2026-06-29,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+11,Tray 11,21,3,1,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,22,3,2,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+11,Tray 11,23,3,3,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+11,Tray 11,24,3,4,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,25,3,5,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,26,3,6,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,27,3,7,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,28,3,8,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,29,3,9,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+11,Tray 11,30,3,10,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+11,Tray 11,31,4,1,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+11,Tray 11,32,4,2,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,33,4,3,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+11,Tray 11,34,4,4,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,35,4,5,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+11,Tray 11,36,4,6,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,37,4,7,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,38,4,8,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+11,Tray 11,39,4,9,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+11,Tray 11,40,4,10,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+11,Tray 11,41,5,1,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,42,5,2,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,43,5,3,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,44,5,4,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,45,5,5,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,46,5,6,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,47,5,7,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,48,5,8,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+11,Tray 11,49,5,9,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,50,5,10,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,51,6,1,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,52,6,2,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,53,6,3,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,54,6,4,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,55,6,5,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,56,6,6,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+11,Tray 11,57,6,7,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+11,Tray 11,58,6,8,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,59,6,9,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,60,6,10,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,61,7,1,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,62,7,2,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 3,3,2026-07-01,No,
+11,Tray 11,63,7,3,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,64,7,4,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,65,7,5,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,66,7,6,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,67,7,7,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,68,7,8,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,69,7,9,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+11,Tray 11,70,7,10,N/M,No Microbes,Heat,Dynamic,Dynamic,Daily watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,1,1,1,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 4,4,2026-07-02,No,
+12,Tray 12,2,1,2,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,3,1,3,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,4,1,4,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,5,1,5,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,6,1,6,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,7,1,7,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,8,1,8,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,9,1,9,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+12,Tray 12,10,1,10,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,11,2,1,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,12,2,2,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,13,2,3,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,14,2,4,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,15,2,5,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,16,2,6,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,17,2,7,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,18,2,8,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,19,2,9,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+12,Tray 12,20,2,10,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+12,Tray 12,21,3,1,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,22,3,2,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,23,3,3,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,24,3,4,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,25,3,5,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,26,3,6,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,27,3,7,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+12,Tray 12,28,3,8,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,29,3,9,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,30,3,10,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 4,4,2026-07-02,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+12,Tray 12,31,4,1,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,32,4,2,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,No,,,,No,
+12,Tray 12,33,4,3,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,34,4,4,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,35,4,5,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,36,4,6,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,37,4,7,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,38,4,8,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,39,4,9,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 1,1,2026-06-29,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+12,Tray 12,40,4,10,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,41,5,1,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,42,5,2,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,43,5,3,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,44,5,4,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,45,5,5,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,46,5,6,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,47,5,7,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,48,5,8,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+12,Tray 12,49,5,9,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,50,5,10,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,51,6,1,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,52,6,2,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,53,6,3,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,54,6,4,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 4,4,2026-07-02,No,
+12,Tray 12,55,6,5,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,56,6,6,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,57,6,7,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,58,6,8,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+12,Tray 12,59,6,9,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,60,6,10,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 1,1,2026-06-29,No,
+12,Tray 12,61,7,1,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,62,7,2,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,63,7,3,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,64,7,4,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,65,7,5,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,66,7,6,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 3,3,2026-07-01,No,
+12,Tray 12,67,7,7,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,68,7,8,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,
+12,Tray 12,69,7,9,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 4,4,2026-07-02,Yes,Possible Day 7 disappearance after earlier emergence. Use this flag only in later adjusted growth-rate analysis.
+12,Tray 12,70,7,10,N/M,No Microbes,Moisture,Inside,Fixed,Scheduled watering,Yes,Day 2,2,2026-06-30,No,

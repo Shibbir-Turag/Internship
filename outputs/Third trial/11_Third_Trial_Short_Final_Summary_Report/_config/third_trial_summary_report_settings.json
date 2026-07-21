@@ -1,0 +1,26 @@
+{
+  "purpose": "Third Trial short final summary report",
+  "created_at": "2026-07-21T17:52:37",
+  "project_root": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship",
+  "script09_reports": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\09_Final_RGB_MS_Synthesis\\_reports",
+  "script09_charts": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\09_Final_RGB_MS_Synthesis\\charts",
+  "script10_package_root": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\10_Final_Figure_Report_Package\\Third_Trial_Final_Package",
+  "input_files": {
+    "final_combined_tray_synthesis": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\09_Final_RGB_MS_Synthesis\\_reports\\final_combined_tray_synthesis.csv",
+    "final_group_synthesis": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\09_Final_RGB_MS_Synthesis\\_reports\\final_group_synthesis.csv",
+    "final_inside_outside_synthesis": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\09_Final_RGB_MS_Synthesis\\_reports\\final_inside_outside_synthesis.csv",
+    "input_file_inventory": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\09_Final_RGB_MS_Synthesis\\_reports\\input_file_inventory.csv",
+    "package_manifest": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\10_Final_Figure_Report_Package\\Third_Trial_Final_Package\\00_Package_Index\\third_trial_package_manifest.csv",
+    "package_summary": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\10_Final_Figure_Report_Package\\Third_Trial_Final_Package\\00_Package_Index\\third_trial_package_summary.csv",
+    "package_zip": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\10_Final_Figure_Report_Package\\Third_Trial_Final_Figure_Report_Package.zip"
+  },
+  "outputs": {
+    "word_report": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\11_Third_Trial_Short_Final_Summary_Report\\_reports\\third_trial_short_final_summary_report.docx",
+    "key_findings_csv": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\11_Third_Trial_Short_Final_Summary_Report\\_reports\\third_trial_summary_key_findings.csv",
+    "settings_json": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\11_Third_Trial_Short_Final_Summary_Report\\_config\\third_trial_summary_report_settings.json",
+    "charts_used_folder": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\11_Third_Trial_Short_Final_Summary_Report\\charts_used"
+  },
+  "key_findings_count": 7,
+  "day7_policy": "Observed Day 7 values are preserved. Adjusted Day 7 values are kept separately for likely bug-eaten cells and are not treated as direct observations.",
+  "interpretation_warning": "The final combined score is descriptive and not a formal statistical test."
+}

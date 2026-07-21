@@ -1,0 +1,47 @@
+{
+  "purpose": "Final synthesis report across First, Second and Third Trial workflows",
+  "created_at": "2026-07-21T18:00:33",
+  "project_root": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship",
+  "outputs_root": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs",
+  "final_output_root": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\All Trials Final Synthesis",
+  "word_report": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\All Trials Final Synthesis\\_reports\\all_trials_final_synthesis_report.docx",
+  "key_findings_csv": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\All Trials Final Synthesis\\_reports\\all_trials_key_findings.csv",
+  "input_inventory_csv": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\All Trials Final Synthesis\\_reports\\all_trials_input_inventory.csv",
+  "synthesis_workbook": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\All Trials Final Synthesis\\_reports\\all_trials_synthesis_workbook.xlsx",
+  "settings_json": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\All Trials Final Synthesis\\_config\\all_trials_synthesis_settings.json",
+  "trial_inputs": {
+    "First Trial": {
+      "output_root": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\First Trial (Two Trays)",
+      "combined_tray_path": "",
+      "group_synthesis_path": "",
+      "inside_outside_path": "",
+      "summary_report_path": "",
+      "package_zip_path": "",
+      "notes": [
+        "First Trial tray-level synthesis table was not found. The report treats the First Trial mainly as the pilot workflow stage."
+      ]
+    },
+    "Second Trial": {
+      "output_root": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Second Trial",
+      "combined_tray_path": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Second Trial\\05_Treatment_Growth_Visuals\\_reports\\tray_growth_metrics.csv",
+      "group_synthesis_path": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Second Trial\\05_Treatment_Growth_Visuals\\_reports\\group_daily_metrics.csv",
+      "inside_outside_path": "",
+      "summary_report_path": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Second Trial\\Second_Trial_RINA_Report.docx",
+      "package_zip_path": "",
+      "notes": []
+    },
+    "Third Trial": {
+      "output_root": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial",
+      "combined_tray_path": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\09_Final_RGB_MS_Synthesis\\_reports\\final_combined_tray_synthesis.csv",
+      "group_synthesis_path": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\09_Final_RGB_MS_Synthesis\\_reports\\final_group_synthesis.csv",
+      "inside_outside_path": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\09_Final_RGB_MS_Synthesis\\_reports\\final_inside_outside_synthesis.csv",
+      "summary_report_path": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\11_Third_Trial_Short_Final_Summary_Report\\_reports\\third_trial_short_final_summary_report.docx",
+      "package_zip_path": "C:\\Users\\tshib\\OneDrive\\Desktop\\Internship\\outputs\\Third trial\\10_Final_Figure_Report_Package\\Third_Trial_Final_Figure_Report_Package.zip",
+      "notes": []
+    }
+  },
+  "key_findings_count": 9,
+  "inventory_rows": 18,
+  "observed_adjusted_policy": "Observed values remain the primary direct image evidence. Adjusted values are kept separately and used only as scenario estimates for likely bug-eaten cells.",
+  "interpretation_warning": "Combined RGB + MS scores are descriptive synthesis scores, not formal statistical significance tests."
+}

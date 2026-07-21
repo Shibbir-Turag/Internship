@@ -1,0 +1,19 @@
+trial,item,path,exists,description
+First Trial,Output root,C:\Users\tshib\OneDrive\Desktop\Internship\outputs\First Trial (Two Trays),Yes,Main output folder for the trial.
+First Trial,Combined tray synthesis,,No,Tray-level final or closest available synthesis table.
+First Trial,Group synthesis,,No,Treatment/group-level comparison table.
+First Trial,Inside vs Outside comparison,,No,Fixed-environment comparison table where available.
+First Trial,Summary report,,No,Existing Word report from the trial workflow.
+First Trial,Package ZIP,,No,"Final packaged outputs for the trial, if available."
+Second Trial,Output root,C:\Users\tshib\OneDrive\Desktop\Internship\outputs\Second Trial,Yes,Main output folder for the trial.
+Second Trial,Combined tray synthesis,C:\Users\tshib\OneDrive\Desktop\Internship\outputs\Second Trial\05_Treatment_Growth_Visuals\_reports\tray_growth_metrics.csv,Yes,Tray-level final or closest available synthesis table.
+Second Trial,Group synthesis,C:\Users\tshib\OneDrive\Desktop\Internship\outputs\Second Trial\05_Treatment_Growth_Visuals\_reports\group_daily_metrics.csv,Yes,Treatment/group-level comparison table.
+Second Trial,Inside vs Outside comparison,,No,Fixed-environment comparison table where available.
+Second Trial,Summary report,C:\Users\tshib\OneDrive\Desktop\Internship\outputs\Second Trial\Second_Trial_RINA_Report.docx,Yes,Existing Word report from the trial workflow.
+Second Trial,Package ZIP,,No,"Final packaged outputs for the trial, if available."
+Third Trial,Output root,C:\Users\tshib\OneDrive\Desktop\Internship\outputs\Third trial,Yes,Main output folder for the trial.
+Third Trial,Combined tray synthesis,C:\Users\tshib\OneDrive\Desktop\Internship\outputs\Third trial\09_Final_RGB_MS_Synthesis\_reports\final_combined_tray_synthesis.csv,Yes,Tray-level final or closest available synthesis table.
+Third Trial,Group synthesis,C:\Users\tshib\OneDrive\Desktop\Internship\outputs\Third trial\09_Final_RGB_MS_Synthesis\_reports\final_group_synthesis.csv,Yes,Treatment/group-level comparison table.
+Third Trial,Inside vs Outside comparison,C:\Users\tshib\OneDrive\Desktop\Internship\outputs\Third trial\09_Final_RGB_MS_Synthesis\_reports\final_inside_outside_synthesis.csv,Yes,Fixed-environment comparison table where available.
+Third Trial,Summary report,C:\Users\tshib\OneDrive\Desktop\Internship\outputs\Third trial\11_Third_Trial_Short_Final_Summary_Report\_reports\third_trial_short_final_summary_report.docx,Yes,Existing Word report from the trial workflow.
+Third Trial,Package ZIP,C:\Users\tshib\OneDrive\Desktop\Internship\outputs\Third trial\10_Final_Figure_Report_Package\Third_Trial_Final_Figure_Report_Package.zip,Yes,"Final packaged outputs for the trial, if available."

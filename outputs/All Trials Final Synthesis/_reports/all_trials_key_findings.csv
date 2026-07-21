@@ -1,0 +1,10 @@
+trial,topic,finding,value,source
+First Trial,Workflow role,The First Trial functioned as the pilot stage for learning the tray-imaging workflow and identifying the need for repeatable image-processing steps.,Pilot stage,Internship workflow context
+Second Trial,Top treatment pattern,"The Second Trial workflow showed Microbes Inside as the strongest treatment pattern, with Tray 8 and Tray 5 identified as the leading trays in the final interpretation.",Qualitative confirmed result,Second Trial workflow notes / final outputs
+Third Trial,Top tray,Tray 8 had the highest available tray-level score.,81.34,final_combined_tray_synthesis.csv
+Third Trial,Microbes vs No Microbes,Microbes had the higher mean group-level score.,62.53,final_group_synthesis.csv
+Third Trial,Treatment comparison,Heat had the highest available treatment-level score.,68.20,final_group_synthesis.csv
+Third Trial,Inside vs Outside — Ideal,Outside trays performed better on the combined RGB + MS score.,-3.99,final_inside_outside_synthesis.csv
+Third Trial,Inside vs Outside — Moisture,Inside trays performed better on the combined RGB + MS score.,27.16,final_inside_outside_synthesis.csv
+All Trials,Methodological development,The workflow progressed from early trial learning to a stable 7 × 10 cell-based RGB and multispectral analysis pipeline with final reporting packages.,Completed pipeline,Scripts 01–12
+All Trials,Day 7 adjustment policy,Observed image values remain the primary evidence. Adjusted values are kept separately only for likely bug-eaten cells and should be described as scenario estimates.,Observed and adjusted kept separate,"Third Trial Scripts 05, 08, 09 and 11"
